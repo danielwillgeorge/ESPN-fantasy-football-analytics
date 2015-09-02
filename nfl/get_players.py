@@ -17,22 +17,39 @@ BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
 # @Author Daniel George
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
 
+players = []
+
 for index, row in games.iterrows():
 	id = row['id']
 	r = requests.get(BASE_URL.format(id))
 	soup = BeautifulSoup(r.text, "html.parser")
-	table = soup.find('table', {'class':'mod-data'})
-	print table
+	table = soup.find_all('table', {'class':'mod-data'})
 
-# find('table', class_='mod-data')
-
-# heads = table.find_all('thead')
-# headers = heads[0].find_all('tr')[1].find_all('th')[1:]
-# headers = [th.text for th in headers]
-# columns = ['id', 'team', 'player'] + headers
-# 
-# players = pd.DataFrame(columns=columns)
-# 
+	for row in table:
+		if "Passing" in row.caption.text:
+			heads = row.find_all('thead')
+			for line in heads:
+				headers = line.find_all('th')
+				headers = [th.text for th in headers]
+				columns = ['id', 'team', 'player'] + headers
+				players = pd.DataFrame(columns=columns)
+				
+# 			team_1 = row.caption.text
+# 			team_1_players = row.tbody.a.text
+			array = []
+			cols = row.find_all('td')
+			for j in range(1, 9):
+				if not cols[1].text.startswith('DNP'):
+					print cols[j].text
+			
+# 			players = players.append(team_1)
+# 			players = players.append(team_1_players)
+# 			print team_1
+# 			print team_1_players
+			#print team_1_players_
+			print array			
+				
+				
 # def get_players(players, team_name):
 #     array = np.zeros((len(players), len(headers)+1), dtype=object)
 #     array[:] = np.nan

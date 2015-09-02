@@ -6,9 +6,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime, date
 #copper.project.path = '../../'
 
-year = 2013
+year = 2014
 #teams = copper.read_csv('teams.csv')
 BASE_URL = 'http://espn.go.com/nba/team/schedule/_/name/{0}/year/{1}/{2}'
+#/seasontype/2
 
 # @Author Daniel George
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
@@ -21,7 +22,7 @@ visit_team = []
 visit_team_score = []
 
 for index, row in teams.iterrows():
-    _team, url = row['team'], row['url']
+    _team, url = index, row['url']
     r = requests.get(BASE_URL.format(row['prefix_1'], year, row['prefix_2']))
     table = BeautifulSoup(r.text).table
     for row in table.find_all('tr')[1:]: # Remove header

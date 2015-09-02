@@ -8,10 +8,10 @@ from bs4 import BeautifulSoup
 
 #copper.project.path = '../../'
 
-url = 'http://espn.go.com/nba/teams'
+url = 'http://espn.go.com/nfl/teams'
 r = requests.get(url)
 
-soup = BeautifulSoup(r.text)
+soup = BeautifulSoup(r.text, "html.parser")
 tables = soup.find_all('ul', class_='medium-logos')
 
 teams = []

@@ -17,10 +17,12 @@ BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
 # @Author Daniel George
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
 
-request = requests.get(BASE_URL.format(games.index[0]))
-
-soup = BeautifulSoup(request.text, "html.parser")
-tables = soup.find_all('table', {'class':'mod-data'})
+for index, row in games.iterrows():
+	id = row['id']
+	r = requests.get(BASE_URL.format(id))
+	soup = BeautifulSoup(r.text, "html.parser")
+	table = soup.find('table', {'class':'mod-data'})
+	print table
 
 # find('table', class_='mod-data')
 

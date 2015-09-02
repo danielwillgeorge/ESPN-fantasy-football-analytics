@@ -8,8 +8,8 @@ from datetime import datetime, date
 
 year = 2014
 #teams = copper.read_csv('teams.csv')
-BASE_URL = 'http://espn.go.com/nba/team/schedule/_/name/{0}/year/{1}/{2}'
-#/seasontype/2
+teams = pd.read_csv('/Users/daniel.george/Desktop/Github/espn-analytics/nfl/teams.csv')
+BASE_URL = 'http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2'
 
 # @Author Daniel George
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
@@ -22,21 +22,30 @@ visit_team = []
 visit_team_score = []
 
 for index, row in teams.iterrows():
-    _team, url = index, row['url']
+    _team, url = row['team'], row['url']
     r = requests.get(BASE_URL.format(row['prefix_1'], year, row['prefix_2']))
-    table = BeautifulSoup(r.text).table
+    #table = BeautifulSoup(r.text, "html.parser").table
+    #new attempt
+    soup = BeautifulSoup(r.text, "html.parser")
+    table = soup.find('table', {'class':'tablehead'})
+    
+#     table_body = table.find('tbody')
+#     
+#     print table_body
+    
+    
     for row in table.find_all('tr')[1:]: # Remove header
         columns = row.find_all('td')
         try:
-            _home = True if columns[1].li.text == 'vs' else False
-            _other_team = columns[1].find_all('a')[1].text
-            _score = columns[2].a.text.split(' ')[0].split('-')
-            _won = True if columns[2].span.text == 'W' else False
+            _home = True if columns[2].li.text == 'vs' else False
+            _other_team = columns[2].find_all('a')[1].text
+            _score = columns[3].a.text.split(' ')[0].split('-')
+            _won = True if columns[3].span.text == 'W' else False
 
-            match_id.append(columns[2].a['href'].split('?id=')[1])
+            match_id.append(columns[3].a['href'].split('?gameId=')[1])
             home_team.append(_team if _home else _other_team)
             visit_team.append(_team if not _home else _other_team)
-            d = datetime.strptime(columns[0].text, '%a, %b %d')
+            d = datetime.strptime(columns[1].text, '%a, %b %d')
             dates.append(date(year, d.month, d.day))
 
             if _home:
@@ -56,10 +65,11 @@ for index, row in teams.iterrows():
         except Exception as e:
             pass # Not all columns row are a match, is OK
             # print(e)
-
+            
 dic = {'id': match_id, 'date': dates, 'home_team': home_team, 'visit_team': visit_team,
         'home_team_score': home_team_score, 'visit_team_score': visit_team_score}
 
-games = pd.DataFrame(dic).drop_duplicates(cols='id').set_index('id')
-print(games)
+games = pd.DataFrame(dic).drop_duplicates(subset='id').set_index('id')
+#print(games)
 #copper.save(games, 'games')
+games.to_csv('games.csv')

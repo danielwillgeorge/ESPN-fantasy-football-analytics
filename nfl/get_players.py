@@ -7,7 +7,9 @@ from datetime import datetime, date
 #copper.project.path = '../..'
 
 #games = copper.read_csv('games.csv').set_index('id')
-BASE_URL = 'http://espn.go.com/nba/boxscore?gameId={0}'
+games = pd.read_csv('/Users/daniel.george/Desktop/Github/espn-analytics/nfl/games.csv')
+
+BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
 
 #http://espn.go.com/nba/boxscore?gameId=400277727
 #http://espn.go.com/nfl/boxscore?gameId=400749514
@@ -18,9 +20,10 @@ BASE_URL = 'http://espn.go.com/nba/boxscore?gameId={0}'
 request = requests.get(BASE_URL.format(games.index[0]))
 
 soup = BeautifulSoup(request.text, "html.parser")
-table = soup.find_all('table', {'class':'mod-data'})
+tables = soup.find_all('table', {'class':'mod-data'})
 
 # find('table', class_='mod-data')
+
 # heads = table.find_all('thead')
 # headers = heads[0].find_all('tr')[1].find_all('th')[1:]
 # headers = [th.text for th in headers]

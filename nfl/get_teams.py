@@ -32,10 +32,10 @@ for table in tables:
 dic = {'url': teams_urls, 'prefix_2': prefix_2, 'prefix_1': prefix_1}
 teams = pd.DataFrame(dic, index=teams)
 teams.index.name = 'team'
-#print(teams)
+print(teams)
 #copper.save(teams, 'teams')
-# for index, row in teams.iterrows():
-#     url = row['url']
-#     print index, url
+for index, row in teams.iterrows():
+    url = row['url']
+    print index, url
 #print teams.columns
-teams.to_csv('teams.csv')
+#teams.to_csv('teams.csv')

@@ -18,36 +18,87 @@ BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
 
 players = []
+stats = []
+stats_ = []
 
 for index, row in games.iterrows():
 	id = row['id']
 	r = requests.get(BASE_URL.format(id))
 	soup = BeautifulSoup(r.text, "html.parser")
-	table = soup.find_all('table', {'class':'mod-data'})
+	table = soup.find_all('div', {'id':'gamepackage-passing'})
+	
+	for table_ in table:
+		table_ = table_.find_all('div', {'class':'col column-one gamepackage-away-wrap'})	
 
-	for row in table:
-		if "Passing" in row.caption.text:
+
+		for row in table_:
 			heads = row.find_all('thead')
 			for line in heads:
 				headers = line.find_all('th')
 				headers = [th.text for th in headers]
+				headers.pop(0)
 				columns = ['id', 'team', 'player'] + headers
+				columns = columns[:9]
 				players = pd.DataFrame(columns=columns)
-				
-# 			team_1 = row.caption.text
-# 			team_1_players = row.tbody.a.text
-			array = []
-			cols = row.find_all('td')
-			for j in range(1, 9):
+								
+			rows = row.find_all('tr', {'class':''})
+			for row_ in rows:
+				cols = row_.find_all('td')
 				if not cols[1].text.startswith('DNP'):
-					print cols[j].text
+					stats = []
+					stats.append(id)
+					stats.append(row.caption.text[:(len(row.caption.text)-8)])
+					for i in range(0,7):
+						stats.append(cols[i].text)
+				stats_.append(stats)
+statistics = pd.DataFrame(np.array(stats_), columns=columns)
+players = players.append(statistics)
+print players
+		
+				
+
+# 	stats = stats[:11]
+# 	for i in range(1):
+# 		players.loc[i] = stats
+# 	print players
 			
-# 			players = players.append(team_1)
-# 			players = players.append(team_1_players)
-# 			print team_1
+				
+				
+# 			array = np.zeros((len(['Matthew Spafford']), 11), dtype=object)
+# 			array[:]=np.nan
+# 			array[0,1]=row.caption.text[:(len(row.caption.text)-8)]
+# 			for i, player in enumerate(['Matthew Spafford']):
+# 				cols = row.find_all('td')
+# 				for j in range(0, 9):
+# 					if not cols[1].text.startswith('DNP'):
+# 						array[i,j+2] = cols[j].text
+			
+# 			players = players.append(frame)
+# 			print players
+# 			#players = players.append(frame)
+# 			for x in array:
+# 				line = np.concatenate((x, ['Detroit',index]))
+# 				new = pd.DataFrame(line)
+# # 				new = pd.DataFrame(line, columns=frame.columns)
+# # 				frame = frame.append(new)
+# 				players = players.append(new)
+
+
+
+# 			bodies = table.tbody
+# 			team_1_players = bodies[0].find_all('tr')
 # 			print team_1_players
-			#print team_1_players_
-			print array			
+			
+			
+# 			array = np.zeros((2,9), dtype=object)
+# 			array[:]=np.nan
+# 			
+# 			
+# 			cols = row.find_all('td')
+# 			for j in range(1, 9):
+# 				if not cols[1].text.startswith('DNP'):
+# 					print cols[j].text
+								
 				
 				
 # def get_players(players, team_name):

@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, date
 #copper.project.path = '../../'
 
-year = 2014
+year = 2010
 #teams = copper.read_csv('teams.csv')
 teams = pd.read_csv('/Users/daniel.george/Desktop/Github/espn-analytics/nfl/teams.csv')
 BASE_URL = 'http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2'

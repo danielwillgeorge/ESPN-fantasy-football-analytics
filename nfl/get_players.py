@@ -7,29 +7,51 @@ from datetime import datetime, date
 # @Author Daniel George
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
 
+# Include as many years as you like in
+# the "paths" list variable.  The default
+# will pull data for the past 5 years.
+
 paths = ['2014','2013','2012','2011','2010']
 
 BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
 
-# @Author Daniel George
-# @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
-
 players = []
 stats = []
 stats_ = []
-
-classes = ["col column-one gamepackage-away-wrap","col column-two gamepackage-home-wrap"]
 divs = []
 
-#for item in classes:
+#classes = ["col column-one gamepackage-away-wrap","col column-two gamepackage-home-wrap"]
+
+'''gamepackage-passing
+gamepackage-rushing
+gamepackage-receiving
+gamepackage-fumbles
+gamepackage-defensive
+gamepackage-interceptions
+gamepackage-kickReturns
+gamepackage-puntReturns
+gamepackage-kicking
+gamepackage-punting'''
+
+# Direct the "games" variable to the "YYYY_games.csv" files
+# you created with "get_games.py".
 
 for path in paths:
-	games = pd.read_csv('/Users/daniel.george/Desktop/Github/espn-analytics/nfl/' + path + '_games.csv')
+	games = pd.read_csv('/path/to/' + path + '_games.csv')
 	for index, row in games.iterrows():
 		id = row['id']
 		r = requests.get(BASE_URL.format(id))
 		soup = BeautifulSoup(r.text, "html.parser")
+		
+		# Replace the "id" parameter with one of the strings
+		# from the triple-quotes above.
+		
 		table = soup.find_all('div', {'id':'gamepackage-rushing'})
+
+		# Replace the "class" parameter with one of the strings from
+		# the commented-out "classes" list above.  This will return one
+		# set of data at a time; otherwise, the request will time out
+		# (in my experience).
 
 		for table_ in table:
 			table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'})	

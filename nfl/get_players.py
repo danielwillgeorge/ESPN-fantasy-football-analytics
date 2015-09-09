@@ -56,7 +56,6 @@ for path in paths:
 		for table_ in table:
 			table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'})	
 
-
 			for row in table_:
 				heads = row.find_all('thead')
 				for line in heads:
@@ -80,7 +79,10 @@ for path in paths:
 							stats.append(cols[i].text)
 					stats_.append(stats)
 
-
 	statistics = pd.DataFrame(np.array(stats_), columns=columns)
 	players = players.append(statistics)
+	# Replace "rushing" with the stats you are looking at (passing, receiving, etc.).
+	# This will return a csv with half of the total data
+	# (for either the home or visiting team).  Run the script again
+	# changing the variables, for the other half.
 	players.to_csv(path + '_rushing_.csv')

@@ -1,18 +1,20 @@
-#import copper
 import numpy as np
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, date
-#copper.project.path = '../../'
-
-year = 2010
-#teams = copper.read_csv('teams.csv')
-teams = pd.read_csv('/Users/daniel.george/Desktop/Github/espn-analytics/nfl/teams.csv')
-BASE_URL = 'http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2'
 
 # @Author Daniel George
 # @Works Cited: Daniel Rodriguez, https://github.com/danielfrg/nba
+
+# Replace the "year" variable with the year 
+# you want to pull.
+year = 2010
+
+# Insert the path to the "teams.csv" file
+# created by "get_teams.py".
+teams = pd.read_csv('/path/to/teams.csv')
+BASE_URL = 'http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2'
 
 match_id = []
 dates = []
@@ -24,15 +26,8 @@ visit_team_score = []
 for index, row in teams.iterrows():
     _team, url = row['team'], row['url']
     r = requests.get(BASE_URL.format(row['prefix_1'], year, row['prefix_2']))
-    #table = BeautifulSoup(r.text, "html.parser").table
-    #new attempt
     soup = BeautifulSoup(r.text, "html.parser")
     table = soup.find('table', {'class':'tablehead'})
-    
-#     table_body = table.find('tbody')
-#     
-#     print table_body
-    
     
     for row in table.find_all('tr')[1:]: # Remove header
         columns = row.find_all('td')
@@ -70,6 +65,4 @@ dic = {'id': match_id, 'date': dates, 'home_team': home_team, 'visit_team': visi
         'home_team_score': home_team_score, 'visit_team_score': visit_team_score}
 
 games = pd.DataFrame(dic).drop_duplicates(subset='id').set_index('id')
-#print(games)
-#copper.save(games, 'games')
 games.to_csv('games.csv')

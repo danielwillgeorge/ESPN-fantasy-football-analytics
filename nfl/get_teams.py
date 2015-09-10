@@ -9,7 +9,7 @@ url = "http://espn.go.com/nfl/teams"
 r = requests.get(url)
 
 soup = BeautifulSoup(r.text, "html.parser")
-tables = soup.find_all("ul", {"class":"medium-logos"})
+tables = soup.find_all("ul", class_="medium-logos")
 
 teams = []
 prefix_1 = []

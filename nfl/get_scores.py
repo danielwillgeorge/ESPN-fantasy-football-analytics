@@ -4,8 +4,6 @@ import subprocess
 
 # @Author Daniel George
 
-t = ('Detroit Lions','San Diego Chargers')
-
 matchups = [('Denver Broncos','Kansas City Chiefs'),
             ('New England Patriots','Buffalo Bills'),
             ('Tennessee Titans','Cleveland Browns'),

@@ -1,0 +1,1 @@
+# Welcome to Fantasy Football Analytics' Documentation!

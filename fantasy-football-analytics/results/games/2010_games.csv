@@ -1,0 +1,333 @@
+id,date,home_team,home_team_score,visit_team,visit_team_score
+300912028,2010-09-12,Washington,13,Dallas Cowboys,7
+300919006,2010-09-19,Dallas Cowboys,20,Chicago,27
+300926034,2010-09-26,Houston,13,Dallas Cowboys,27
+301010006,2010-10-10,Dallas Cowboys,27,Tennessee,34
+301017016,2010-10-17,Minnesota,24,Dallas Cowboys,21
+301025006,2010-10-25,Dallas Cowboys,35,New York,41
+301031006,2010-10-31,Dallas Cowboys,17,Jacksonville,35
+301107009,2010-11-07,Green Bay,45,Dallas Cowboys,7
+301114019,2010-11-14,New York,20,Dallas Cowboys,33
+301121006,2010-11-21,Dallas Cowboys,35,Detroit,19
+301125006,2010-11-25,Dallas Cowboys,27,New Orleans,30
+301205011,2010-12-05,Indianapolis,35,Dallas Cowboys,38
+301212006,2010-12-12,Dallas Cowboys,27,Philadelphia,30
+301219006,2010-12-19,Dallas Cowboys,33,Washington,30
+301225022,2010-12-25,Arizona,27,Dallas Cowboys,26
+310102021,2010-01-02,Philadelphia,13,Dallas Cowboys,14
+300808004,2010-08-08,Cincinnati,7,Dallas Cowboys,16
+300812006,2010-08-12,Dallas Cowboys,9,Oakland,17
+300821024,2010-08-21,San Diego,14,Dallas Cowboys,16
+300828034,2010-08-28,Houston,23,Dallas Cowboys,7
+300902006,2010-09-02,Dallas Cowboys,27,Miami,25
+300912019,2010-09-12,New York Giants,31,Carolina,18
+300919011,2010-09-19,Indianapolis,38,New York Giants,14
+300926019,2010-09-26,New York Giants,10,Tennessee,29
+301003019,2010-10-03,New York Giants,17,Chicago,3
+301010034,2010-10-10,Houston,10,New York Giants,34
+301017019,2010-10-17,New York Giants,28,Detroit,20
+301107026,2010-11-07,Seattle,7,New York Giants,41
+301121021,2010-11-21,Philadelphia,27,New York Giants,17
+301128019,2010-11-28,New York Giants,24,Jacksonville,20
+301205019,2010-12-05,New York Giants,31,Washington,7
+301213016,2010-12-13,Minnesota,3,New York Giants,21
+301219019,2010-12-19,New York Giants,31,Philadelphia,38
+301226009,2010-12-26,Green Bay,45,New York Giants,17
+310102028,2010-01-02,Washington,14,New York Giants,17
+300816020,2010-08-16,New York,16,New York Giants,31
+300821019,2010-08-21,New York Giants,17,Pittsburgh,24
+300828033,2010-08-28,Baltimore,24,New York Giants,10
+300902019,2010-09-02,New York Giants,20,New England,17
+310109021,2010-01-09,Philadelphia Eagles,16,Green Bay,21
+300912021,2010-09-12,Philadelphia Eagles,20,Green Bay,27
+300919008,2010-09-19,Detroit,32,Philadelphia Eagles,35
+300926030,2010-09-26,Jacksonville,3,Philadelphia Eagles,28
+301003021,2010-10-03,Philadelphia Eagles,12,Washington,17
+301010025,2010-10-10,San Francisco,24,Philadelphia Eagles,27
+301017021,2010-10-17,Philadelphia Eagles,31,Atlanta,17
+301024010,2010-10-24,Tennessee,37,Philadelphia Eagles,19
+301107021,2010-11-07,Philadelphia Eagles,26,Indianapolis,24
+301115028,2010-11-15,Washington,28,Philadelphia Eagles,59
+301128003,2010-11-28,Chicago,31,Philadelphia Eagles,26
+301202021,2010-12-02,Philadelphia Eagles,34,Houston,24
+301228021,2010-12-28,Philadelphia Eagles,14,Minnesota,24
+300813021,2010-08-13,Philadelphia Eagles,28,Jacksonville,27
+300820004,2010-08-20,Cincinnati,22,Philadelphia Eagles,9
+300827012,2010-08-27,Kansas City,17,Philadelphia Eagles,20
+300902021,2010-09-02,Philadelphia Eagles,17,New York,21
+300919028,2010-09-19,Washington Redskins,27,Houston,30
+300926014,2010-09-26,St. Louis,30,Washington Redskins,16
+301010028,2010-10-10,Washington Redskins,16,Green Bay,13
+301017028,2010-10-17,Washington Redskins,24,Indianapolis,27
+301024003,2010-10-24,Chicago,14,Washington Redskins,17
+301031008,2010-10-31,Detroit,37,Washington Redskins,25
+301121010,2010-11-21,Tennessee,16,Washington Redskins,19
+301128028,2010-11-28,Washington Redskins,13,Minnesota,17
+301212028,2010-12-12,Washington Redskins,16,Tampa Bay,17
+301226030,2010-12-26,Jacksonville,17,Washington Redskins,20
+300813028,2010-08-13,Washington Redskins,42,Buffalo,17
+300821028,2010-08-21,Washington Redskins,3,Baltimore,23
+300827020,2010-08-27,New York,11,Washington Redskins,16
+300902022,2010-09-02,Arizona,20,Washington Redskins,10
+300912002,2010-09-12,Buffalo Bills,10,Miami,15
+300919009,2010-09-19,Green Bay,34,Buffalo Bills,7
+300926017,2010-09-26,New England,38,Buffalo Bills,30
+301003002,2010-10-03,Buffalo Bills,14,New York,38
+301010002,2010-10-10,Buffalo Bills,26,Jacksonville,36
+301024033,2010-10-24,Baltimore,37,Buffalo Bills,34
+301031012,2010-10-31,Kansas City,13,Buffalo Bills,10
+301107002,2010-11-07,Buffalo Bills,19,Chicago,22
+301114002,2010-11-14,Buffalo Bills,14,Detroit,12
+301121004,2010-11-21,Cincinnati,31,Buffalo Bills,49
+301128002,2010-11-28,Buffalo Bills,16,Pittsburgh,19
+301205016,2010-12-05,Minnesota,38,Buffalo Bills,14
+301212002,2010-12-12,Buffalo Bills,13,Cleveland,6
+301219015,2010-12-19,Miami,14,Buffalo Bills,17
+301226002,2010-12-26,Buffalo Bills,3,New England,34
+310102020,2010-01-02,New York,38,Buffalo Bills,7
+300819002,2010-08-19,Buffalo Bills,34,Indianapolis,21
+300828002,2010-08-28,Buffalo Bills,35,Cincinnati,20
+300902008,2010-09-02,Detroit,28,Buffalo Bills,23
+300919016,2010-09-19,Minnesota,10,Miami Dolphins,14
+300926015,2010-09-26,Miami Dolphins,23,New York,31
+301004015,2010-10-04,Miami Dolphins,14,New England,41
+301017009,2010-10-17,Green Bay,20,Miami Dolphins,23
+301024015,2010-10-24,Miami Dolphins,22,Pittsburgh,23
+301031004,2010-10-31,Cincinnati,14,Miami Dolphins,22
+301107033,2010-11-07,Baltimore,26,Miami Dolphins,10
+301114015,2010-11-14,Miami Dolphins,29,Tennessee,17
+301118015,2010-11-18,Miami Dolphins,0,Chicago,16
+301128013,2010-11-28,Oakland,17,Miami Dolphins,33
+301205015,2010-12-05,Miami Dolphins,10,Cleveland,13
+301212020,2010-12-12,New York,6,Miami Dolphins,10
+301226015,2010-12-26,Miami Dolphins,27,Detroit,34
+310102017,2010-01-02,New England,38,Miami Dolphins,7
+300814015,2010-08-14,Miami Dolphins,10,Tampa Bay,7
+300821030,2010-08-21,Jacksonville,26,Miami Dolphins,27
+300827015,2010-08-27,Miami Dolphins,6,Atlanta,16
+310116017,2010-01-16,New England Patriots,21,New York,28
+300912017,2010-09-12,New England Patriots,38,Cincinnati,24
+300919020,2010-09-19,New York,28,New England Patriots,14
+301017017,2010-10-17,New England Patriots,23,Baltimore,20
+301024024,2010-10-24,San Diego,20,New England Patriots,23
+301031017,2010-10-31,New England Patriots,28,Minnesota,18
+301107005,2010-11-07,Cleveland,34,New England Patriots,14
+301114023,2010-11-14,Pittsburgh,26,New England Patriots,39
+301121017,2010-11-21,New England Patriots,31,Indianapolis,28
+301125008,2010-11-25,Detroit,24,New England Patriots,45
+301206017,2010-12-06,New England Patriots,45,New York,3
+301212003,2010-12-12,Chicago,7,New England Patriots,36
+301219017,2010-12-19,New England Patriots,31,Green Bay,27
+300812017,2010-08-12,New England Patriots,27,New Orleans,24
+300819001,2010-08-19,Atlanta,10,New England Patriots,28
+300826017,2010-08-26,New England Patriots,35,St. Louis,36
+310108011,2010-01-08,Indianapolis,16,New York Jets,17
+310123023,2010-01-23,Pittsburgh,24,New York Jets,19
+300913020,2010-09-13,New York Jets,9,Baltimore,10
+301011020,2010-10-11,New York Jets,29,Minnesota,20
+301017007,2010-10-17,Denver,20,New York Jets,24
+301031020,2010-10-31,New York Jets,0,Green Bay,9
+301107008,2010-11-07,Detroit,20,New York Jets,23
+301114005,2010-11-14,Cleveland,20,New York Jets,26
+301121020,2010-11-21,New York Jets,30,Houston,27
+301125020,2010-11-25,New York Jets,26,Cincinnati,10
+301219023,2010-12-19,Pittsburgh,17,New York Jets,22
+301226003,2010-12-26,Chicago,38,New York Jets,34
+300821029,2010-08-21,Carolina,3,New York Jets,9
+300912014,2010-09-12,St. Louis,13,Arizona Cardinals,17
+300919001,2010-09-19,Atlanta,41,Arizona Cardinals,7
+300926022,2010-09-26,Arizona Cardinals,24,Oakland,23
+301003024,2010-10-03,San Diego,41,Arizona Cardinals,10
+301010022,2010-10-10,Arizona Cardinals,30,New Orleans,20
+301024026,2010-10-24,Seattle,22,Arizona Cardinals,10
+301031022,2010-10-31,Arizona Cardinals,35,Tampa Bay,38
+301107016,2010-11-07,Minnesota,27,Arizona Cardinals,24
+301114022,2010-11-14,Arizona Cardinals,18,Seattle,36
+301121012,2010-11-21,Kansas City,31,Arizona Cardinals,13
+301129022,2010-11-29,Arizona Cardinals,6,San Francisco,27
+301205022,2010-12-05,Arizona Cardinals,6,St. Louis,19
+301212022,2010-12-12,Arizona Cardinals,43,Denver,13
+301219029,2010-12-19,Carolina,19,Arizona Cardinals,12
+310102025,2010-01-02,San Francisco,38,Arizona Cardinals,7
+300814022,2010-08-14,Arizona Cardinals,19,Houston,16
+300823010,2010-08-23,Tennessee,24,Arizona Cardinals,10
+300828003,2010-08-28,Chicago,9,Arizona Cardinals,14
+300912026,2010-09-12,Seattle,31,San Francisco 49ers,6
+300920025,2010-09-20,San Francisco 49ers,22,New Orleans,25
+300926012,2010-09-26,Kansas City,31,San Francisco 49ers,10
+301003001,2010-10-03,Atlanta,16,San Francisco 49ers,14
+301017025,2010-10-17,San Francisco 49ers,17,Oakland,9
+301024029,2010-10-24,Carolina,23,San Francisco 49ers,20
+301031025,2010-10-31,San Francisco 49ers,24,Denver,16
+301114025,2010-11-14,San Francisco 49ers,23,St. Louis,20
+301121025,2010-11-21,San Francisco 49ers,0,Tampa Bay,21
+301205009,2010-12-05,Green Bay,34,San Francisco 49ers,16
+301212025,2010-12-12,San Francisco 49ers,40,Seattle,21
+301216024,2010-12-16,San Diego,34,San Francisco 49ers,7
+301226014,2010-12-26,St. Louis,25,San Francisco 49ers,17
+300815011,2010-08-15,Indianapolis,17,San Francisco 49ers,37
+300822025,2010-08-22,San Francisco 49ers,15,Minnesota,10
+300828013,2010-08-28,Oakland,24,San Francisco 49ers,28
+300902025,2010-09-02,San Francisco 49ers,17,San Diego,14
+310108026,2010-01-08,Seattle Seahawks,41,New Orleans,36
+310116003,2010-01-16,Chicago,35,Seattle Seahawks,24
+300919007,2010-09-19,Denver,31,Seattle Seahawks,14
+300926026,2010-09-26,Seattle Seahawks,27,San Diego,20
+301003014,2010-10-03,St. Louis,20,Seattle Seahawks,3
+301017003,2010-10-17,Chicago,20,Seattle Seahawks,23
+301031013,2010-10-31,Oakland,33,Seattle Seahawks,3
+301121018,2010-11-21,New Orleans,34,Seattle Seahawks,19
+301128026,2010-11-28,Seattle Seahawks,24,Kansas City,42
+301205026,2010-12-05,Seattle Seahawks,31,Carolina,14
+301219026,2010-12-19,Seattle Seahawks,18,Atlanta,34
+301226027,2010-12-26,Tampa Bay,38,Seattle Seahawks,15
+310102026,2010-01-02,Seattle Seahawks,16,St. Louis,6
+300814026,2010-08-14,Seattle Seahawks,20,Tennessee,18
+300821026,2010-08-21,Seattle Seahawks,24,Green Bay,27
+300828016,2010-08-28,Minnesota,24,Seattle Seahawks,13
+300902013,2010-09-02,Oakland,27,Seattle Seahawks,24
+300919013,2010-09-19,Oakland,16,St. Louis Rams,14
+301010008,2010-10-10,Detroit,44,St. Louis Rams,6
+301017014,2010-10-17,St. Louis Rams,20,San Diego,17
+301024027,2010-10-24,Tampa Bay,18,St. Louis Rams,17
+301031014,2010-10-31,St. Louis Rams,20,Carolina,10
+301121014,2010-11-21,St. Louis Rams,17,Atlanta,34
+301128007,2010-11-28,Denver,33,St. Louis Rams,36
+301212018,2010-12-12,New Orleans,31,St. Louis Rams,13
+301219014,2010-12-19,St. Louis Rams,13,Kansas City,27
+300814014,2010-08-14,St. Louis Rams,7,Minnesota,28
+300821005,2010-08-21,Cleveland,17,St. Louis Rams,19
+300902014,2010-09-02,St. Louis Rams,27,Baltimore,21
+300912030,2010-09-12,Jacksonville,24,Denver Broncos,17
+300926007,2010-09-26,Denver Broncos,13,Indianapolis,27
+301003010,2010-10-03,Tennessee,20,Denver Broncos,26
+301010033,2010-10-10,Baltimore,31,Denver Broncos,17
+301024007,2010-10-24,Denver Broncos,14,Oakland,59
+301114007,2010-11-14,Denver Broncos,49,Kansas City,29
+301122024,2010-11-22,San Diego,35,Denver Broncos,14
+301205012,2010-12-05,Kansas City,10,Denver Broncos,6
+301219013,2010-12-19,Oakland,39,Denver Broncos,23
+301226007,2010-12-26,Denver Broncos,24,Houston,23
+310102007,2010-01-02,Denver Broncos,28,San Diego,33
+300815004,2010-08-15,Cincinnati,33,Denver Broncos,24
+300821007,2010-08-21,Denver Broncos,20,Detroit,25
+300829007,2010-08-29,Denver Broncos,34,Pittsburgh,17
+300902016,2010-09-02,Minnesota,31,Denver Broncos,24
+310109012,2010-01-09,Kansas City Chiefs,7,Baltimore,30
+300913012,2010-09-13,Kansas City Chiefs,21,San Diego,14
+300919005,2010-09-19,Cleveland,14,Kansas City Chiefs,16
+301010011,2010-10-10,Indianapolis,19,Kansas City Chiefs,9
+301017034,2010-10-17,Houston,35,Kansas City Chiefs,31
+301024012,2010-10-24,Kansas City Chiefs,42,Jacksonville,20
+301107013,2010-11-07,Oakland,23,Kansas City Chiefs,20
+301212024,2010-12-12,San Diego,31,Kansas City Chiefs,0
+301226012,2010-12-26,Kansas City Chiefs,34,Tennessee,14
+310102012,2010-01-02,Kansas City Chiefs,10,Oakland,31
+300813001,2010-08-13,Atlanta,20,Kansas City Chiefs,10
+300821027,2010-08-21,Tampa Bay,20,Kansas City Chiefs,15
+300902012,2010-09-02,Kansas City Chiefs,17,Green Bay,13
+300912010,2010-09-12,Tennessee,38,Oakland Raiders,13
+301003013,2010-10-03,Oakland Raiders,24,Houston,31
+301010013,2010-10-10,Oakland Raiders,35,San Diego,27
+301121023,2010-11-21,Pittsburgh,35,Oakland Raiders,3
+301205024,2010-12-05,San Diego,13,Oakland Raiders,28
+301212030,2010-12-12,Jacksonville,38,Oakland Raiders,31
+301226013,2010-12-26,Oakland Raiders,26,Indianapolis,31
+300821003,2010-08-21,Chicago,17,Oakland Raiders,32
+300919024,2010-09-19,San Diego Chargers,38,Jacksonville,13
+301031024,2010-10-31,San Diego Chargers,33,Tennessee,25
+301107034,2010-11-07,Houston,23,San Diego Chargers,29
+301128011,2010-11-28,Indianapolis,14,San Diego Chargers,36
+301226004,2010-12-26,Cincinnati,34,San Diego Chargers,20
+300814024,2010-08-14,San Diego Chargers,25,Chicago,10
+300827018,2010-08-27,New Orleans,36,San Diego Chargers,21
+310123003,2010-01-23,Chicago Bears,14,Green Bay,21
+300912003,2010-09-12,Chicago Bears,19,Detroit,14
+300927003,2010-09-27,Chicago Bears,20,Green Bay,17
+301010029,2010-10-10,Carolina,6,Chicago Bears,23
+301114003,2010-11-14,Chicago Bears,27,Minnesota,13
+301205008,2010-12-05,Detroit,20,Chicago Bears,24
+301220016,2010-12-20,Minnesota,14,Chicago Bears,40
+310102009,2010-01-02,Green Bay,10,Chicago Bears,3
+300902005,2010-09-02,Cleveland,13,Chicago Bears,10
+300926016,2010-09-26,Minnesota,24,Detroit Lions,10
+301003009,2010-10-03,Green Bay,28,Detroit Lions,26
+301212008,2010-12-12,Detroit Lions,7,Green Bay,3
+301219027,2010-12-19,Tampa Bay,20,Detroit Lions,23
+310102008,2010-01-02,Detroit Lions,20,Minnesota,13
+300814023,2010-08-14,Pittsburgh,23,Detroit Lions,7
+300828008,2010-08-28,Detroit Lions,35,Cleveland,27
+310115001,2010-01-15,Atlanta,21,Green Bay Packers,48
+310206009,2010-02-06,Green Bay Packers,31,Pittsburgh,25
+301024009,2010-10-24,Green Bay Packers,28,Minnesota,24
+301121016,2010-11-21,Minnesota,3,Green Bay Packers,31
+301128001,2010-11-28,Atlanta,20,Green Bay Packers,17
+300814009,2010-08-14,Green Bay Packers,24,Cleveland,27
+300826009,2010-08-26,Green Bay Packers,59,Indianapolis,24
+300909018,2010-09-09,New Orleans,14,Minnesota Vikings,9
+310115023,2010-01-15,Pittsburgh,31,Baltimore Ravens,24
+300919004,2010-09-19,Cincinnati,15,Baltimore Ravens,10
+300926033,2010-09-26,Baltimore Ravens,24,Cleveland,17
+301003023,2010-10-03,Pittsburgh,14,Baltimore Ravens,17
+301111001,2010-11-11,Atlanta,26,Baltimore Ravens,21
+301121029,2010-11-21,Carolina,13,Baltimore Ravens,37
+301128033,2010-11-28,Baltimore Ravens,17,Tampa Bay,10
+301205033,2010-12-05,Baltimore Ravens,10,Pittsburgh,13
+301213034,2010-12-13,Houston,28,Baltimore Ravens,34
+301219033,2010-12-19,Baltimore Ravens,30,New Orleans,24
+301226005,2010-12-26,Cleveland,10,Baltimore Ravens,20
+310102033,2010-01-02,Baltimore Ravens,13,Cincinnati,7
+300812033,2010-08-12,Baltimore Ravens,17,Carolina,12
+300926029,2010-09-26,Carolina,7,Cincinnati Bengals,20
+301003005,2010-10-03,Cleveland,23,Cincinnati Bengals,20
+301010004,2010-10-10,Cincinnati Bengals,21,Tampa Bay,24
+301024001,2010-10-24,Atlanta,39,Cincinnati Bengals,32
+301108004,2010-11-08,Cincinnati Bengals,21,Pittsburgh,27
+301114011,2010-11-14,Indianapolis,23,Cincinnati Bengals,17
+301205004,2010-12-05,Cincinnati Bengals,30,New Orleans,34
+301212023,2010-12-12,Pittsburgh,23,Cincinnati Bengals,7
+301219004,2010-12-19,Cincinnati Bengals,19,Cleveland,17
+300902011,2010-09-02,Indianapolis,28,Cincinnati Bengals,30
+300912027,2010-09-12,Tampa Bay,17,Cleveland Browns,14
+301010005,2010-10-10,Cleveland Browns,10,Atlanta,20
+301017023,2010-10-17,Pittsburgh,28,Cleveland Browns,10
+301024018,2010-10-24,New Orleans,17,Cleveland Browns,30
+301121030,2010-11-21,Jacksonville,24,Cleveland Browns,20
+301128005,2010-11-28,Cleveland Browns,24,Carolina,23
+310102005,2010-01-02,Cleveland Browns,9,Pittsburgh,41
+300912023,2010-09-12,Pittsburgh Steelers,15,Atlanta,9
+300919010,2010-09-19,Tennessee,11,Pittsburgh Steelers,19
+300926027,2010-09-26,Tampa Bay,13,Pittsburgh Steelers,38
+301031018,2010-10-31,New Orleans,20,Pittsburgh Steelers,10
+301223023,2010-12-23,Pittsburgh Steelers,27,Carolina,3
+300902023,2010-09-02,Pittsburgh Steelers,19,Carolina,3
+300926018,2010-09-26,New Orleans,24,Atlanta Falcons,27
+301107001,2010-11-07,Atlanta Falcons,27,Tampa Bay,21
+301205027,2010-12-05,Tampa Bay,24,Atlanta Falcons,28
+301212029,2010-12-12,Carolina,10,Atlanta Falcons,31
+301227001,2010-12-27,Atlanta Falcons,14,New Orleans,17
+310102001,2010-01-02,Atlanta Falcons,31,Carolina,10
+300902030,2010-09-02,Jacksonville,13,Atlanta Falcons,9
+300919029,2010-09-19,Carolina Panthers,7,Tampa Bay,20
+301003018,2010-10-03,New Orleans,16,Carolina Panthers,14
+301107029,2010-11-07,Carolina Panthers,3,New Orleans,34
+301114027,2010-11-14,Tampa Bay,31,Carolina Panthers,16
+300828029,2010-08-28,Carolina Panthers,15,Tennessee,7
+301017027,2010-10-17,Tampa Bay,6,New Orleans Saints,31
+310102018,2010-01-02,New Orleans Saints,13,Tampa Bay,23
+300821018,2010-08-21,New Orleans Saints,38,Houston,20
+300902010,2010-09-02,Tennessee,27,New Orleans Saints,24
+300828027,2010-08-28,Tampa Bay Buccaneers,13,Jacksonville,19
+300902034,2010-09-02,Houston,17,Tampa Bay Buccaneers,24
+300912034,2010-09-12,Houston Texans,34,Indianapolis,24
+301101011,2010-11-01,Indianapolis,30,Houston Texans,17
+301114030,2010-11-14,Jacksonville,31,Houston Texans,24
+301128034,2010-11-28,Houston Texans,20,Tennessee,0
+301219010,2010-12-19,Tennessee,31,Houston Texans,17
+310102034,2010-01-02,Houston Texans,34,Jacksonville,17
+301003030,2010-10-03,Jacksonville,31,Indianapolis Colts,28
+301209010,2010-12-09,Tennessee,28,Indianapolis Colts,30
+301219011,2010-12-19,Indianapolis Colts,34,Jacksonville,24
+310102011,2010-01-02,Indianapolis Colts,23,Tennessee,20
+301018030,2010-10-18,Jacksonville Jaguars,3,Tennessee,30
+301205010,2010-12-05,Tennessee,6,Jacksonville Jaguars,17

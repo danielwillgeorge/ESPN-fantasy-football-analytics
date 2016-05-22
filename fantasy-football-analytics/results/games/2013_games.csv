@@ -1,0 +1,332 @@
+id,date,home_team,home_team_score,visit_team,visit_team_score
+330908006,2013-09-08,Dallas Cowboys,36,New York,31
+330915012,2013-09-15,Kansas City,17,Dallas Cowboys,16
+330922006,2013-09-22,Dallas Cowboys,31,St. Louis,7
+330929024,2013-09-29,San Diego,30,Dallas Cowboys,21
+331006006,2013-10-06,Dallas Cowboys,48,Denver,51
+331013006,2013-10-13,Dallas Cowboys,31,Washington,16
+331020021,2013-10-20,Philadelphia,3,Dallas Cowboys,17
+331027008,2013-10-27,Detroit,31,Dallas Cowboys,30
+331103006,2013-11-03,Dallas Cowboys,27,Minnesota,23
+331110018,2013-11-10,New Orleans,49,Dallas Cowboys,17
+331124019,2013-11-24,New York,21,Dallas Cowboys,24
+331128006,2013-11-28,Dallas Cowboys,31,Oakland,24
+331209003,2013-12-09,Chicago,45,Dallas Cowboys,28
+331215006,2013-12-15,Dallas Cowboys,36,Green Bay,37
+331222028,2013-12-22,Washington,23,Dallas Cowboys,24
+331229006,2013-12-29,Dallas Cowboys,22,Philadelphia,24
+330804006,2013-08-04,Dallas Cowboys,24,Miami,20
+330809013,2013-08-09,Oakland,19,Dallas Cowboys,17
+330817022,2013-08-17,Arizona,12,Dallas Cowboys,7
+330824006,2013-08-24,Dallas Cowboys,24,Cincinnati,18
+330829006,2013-08-29,Dallas Cowboys,6,Houston,24
+330915019,2013-09-15,New York Giants,23,Denver,41
+330922029,2013-09-22,Carolina,38,New York Giants,0
+330929012,2013-09-29,Kansas City,31,New York Giants,7
+331006019,2013-10-06,New York Giants,21,Philadelphia,36
+331010003,2013-10-10,Chicago,27,New York Giants,21
+331021019,2013-10-21,New York Giants,23,Minnesota,7
+331027021,2013-10-27,Philadelphia,7,New York Giants,15
+331110019,2013-11-10,New York Giants,24,Oakland,20
+331117019,2013-11-17,New York Giants,27,Green Bay,13
+331201028,2013-12-01,Washington,17,New York Giants,24
+331208024,2013-12-08,San Diego,37,New York Giants,14
+331215019,2013-12-15,New York Giants,0,Seattle,23
+331222008,2013-12-22,Detroit,20,New York Giants,23
+331229019,2013-12-29,New York Giants,20,Washington,6
+330810023,2013-08-10,Pittsburgh,13,New York Giants,18
+330818019,2013-08-18,New York Giants,12,Indianapolis,20
+330824019,2013-08-24,New York Giants,21,New York,24
+330829017,2013-08-29,New England,28,New York Giants,20
+340104021,2013-01-04,Philadelphia Eagles,24,New Orleans,26
+330909028,2013-09-09,Washington,27,Philadelphia Eagles,33
+330915021,2013-09-15,Philadelphia Eagles,30,San Diego,33
+330919021,2013-09-19,Philadelphia Eagles,16,Kansas City,26
+330929007,2013-09-29,Denver,52,Philadelphia Eagles,20
+331013027,2013-10-13,Tampa Bay,20,Philadelphia Eagles,31
+331103013,2013-11-03,Oakland,20,Philadelphia Eagles,49
+331110009,2013-11-10,Green Bay,13,Philadelphia Eagles,27
+331117021,2013-11-17,Philadelphia Eagles,24,Washington,16
+331201021,2013-12-01,Philadelphia Eagles,24,Arizona,21
+331208021,2013-12-08,Philadelphia Eagles,34,Detroit,20
+331215016,2013-12-15,Minnesota,48,Philadelphia Eagles,30
+331222021,2013-12-22,Philadelphia Eagles,54,Chicago,11
+330809021,2013-08-09,Philadelphia Eagles,22,New England,31
+330815021,2013-08-15,Philadelphia Eagles,14,Carolina,9
+330824030,2013-08-24,Jacksonville,24,Philadelphia Eagles,31
+330829020,2013-08-29,New York,27,Philadelphia Eagles,20
+330915009,2013-09-15,Green Bay,38,Washington Redskins,20
+330922028,2013-09-22,Washington Redskins,20,Detroit,27
+330929013,2013-09-29,Oakland,14,Washington Redskins,24
+331020028,2013-10-20,Washington Redskins,45,Chicago,41
+331027007,2013-10-27,Denver,45,Washington Redskins,21
+331103028,2013-11-03,Washington Redskins,30,San Diego,24
+331107016,2013-11-07,Minnesota,34,Washington Redskins,27
+331125028,2013-11-25,Washington Redskins,6,San Francisco,27
+331208028,2013-12-08,Washington Redskins,10,Kansas City,45
+331215001,2013-12-15,Atlanta,27,Washington Redskins,26
+330808010,2013-08-08,Tennessee,21,Washington Redskins,22
+330819028,2013-08-19,Washington Redskins,24,Pittsburgh,13
+330824028,2013-08-24,Washington Redskins,30,Buffalo,7
+330829027,2013-08-29,Tampa Bay,12,Washington Redskins,30
+330908002,2013-09-08,Buffalo Bills,21,New England,23
+330915002,2013-09-15,Buffalo Bills,24,Carolina,23
+330922020,2013-09-22,New York,27,Buffalo Bills,20
+330929002,2013-09-29,Buffalo Bills,23,Baltimore,20
+331003005,2013-10-03,Cleveland,37,Buffalo Bills,24
+331013002,2013-10-13,Buffalo Bills,24,Cincinnati,27
+331020015,2013-10-20,Miami,21,Buffalo Bills,23
+331027018,2013-10-27,New Orleans,35,Buffalo Bills,17
+331103002,2013-11-03,Buffalo Bills,13,Kansas City,23
+331110023,2013-11-10,Pittsburgh,23,Buffalo Bills,10
+331117002,2013-11-17,Buffalo Bills,37,New York,14
+331201002,2013-12-01,Buffalo Bills,31,Atlanta,34
+331208027,2013-12-08,Tampa Bay,27,Buffalo Bills,6
+331215030,2013-12-15,Jacksonville,20,Buffalo Bills,27
+331222002,2013-12-22,Buffalo Bills,19,Miami,0
+331229017,2013-12-29,New England,34,Buffalo Bills,20
+330811011,2013-08-11,Indianapolis,20,Buffalo Bills,44
+330816002,2013-08-16,Buffalo Bills,20,Minnesota,16
+330829002,2013-08-29,Buffalo Bills,13,Detroit,35
+330908005,2013-09-08,Cleveland,10,Miami Dolphins,23
+330915011,2013-09-15,Indianapolis,20,Miami Dolphins,24
+330922015,2013-09-22,Miami Dolphins,27,Atlanta,23
+330930018,2013-09-30,New Orleans,38,Miami Dolphins,17
+331006015,2013-10-06,Miami Dolphins,23,Baltimore,26
+331027017,2013-10-27,New England,27,Miami Dolphins,17
+331031015,2013-10-31,Miami Dolphins,22,Cincinnati,20
+331111027,2013-11-11,Tampa Bay,22,Miami Dolphins,19
+331117015,2013-11-17,Miami Dolphins,20,San Diego,16
+331124015,2013-11-24,Miami Dolphins,16,Carolina,20
+331201020,2013-12-01,New York,3,Miami Dolphins,23
+331208023,2013-12-08,Pittsburgh,28,Miami Dolphins,34
+331215015,2013-12-15,Miami Dolphins,24,New England,20
+331229015,2013-12-29,Miami Dolphins,7,New York,20
+330809030,2013-08-09,Jacksonville,3,Miami Dolphins,27
+330817034,2013-08-17,Houston,24,Miami Dolphins,17
+330824015,2013-08-24,Miami Dolphins,16,Tampa Bay,17
+330829015,2013-08-29,Miami Dolphins,24,New Orleans,21
+340111017,2013-01-11,New England Patriots,43,Indianapolis,22
+340119007,2013-01-19,Denver,26,New England Patriots,16
+330912017,2013-09-12,New England Patriots,13,New York,10
+330922017,2013-09-22,New England Patriots,23,Tampa Bay,3
+330929001,2013-09-29,Atlanta,23,New England Patriots,30
+331006004,2013-10-06,Cincinnati,13,New England Patriots,6
+331013017,2013-10-13,New England Patriots,30,New Orleans,27
+331020020,2013-10-20,New York,30,New England Patriots,27
+331103017,2013-11-03,New England Patriots,55,Pittsburgh,31
+331118029,2013-11-18,Carolina,24,New England Patriots,20
+331124017,2013-11-24,New England Patriots,34,Denver,31
+331201034,2013-12-01,Houston,31,New England Patriots,34
+331208017,2013-12-08,New England Patriots,27,Cleveland,26
+331222033,2013-12-22,Baltimore,7,New England Patriots,41
+330816017,2013-08-16,New England Patriots,25,Tampa Bay,21
+330822008,2013-08-22,Detroit,40,New England Patriots,9
+330908020,2013-09-08,New York Jets,18,Tampa Bay,17
+330929010,2013-09-29,Tennessee,38,New York Jets,13
+331007001,2013-10-07,Atlanta,28,New York Jets,30
+331013020,2013-10-13,New York Jets,6,Pittsburgh,19
+331027004,2013-10-27,Cincinnati,49,New York Jets,9
+331103020,2013-11-03,New York Jets,26,New Orleans,20
+331124033,2013-11-24,Baltimore,19,New York Jets,3
+331208020,2013-12-08,New York Jets,37,Oakland,27
+331215029,2013-12-15,Carolina,30,New York Jets,20
+331222020,2013-12-22,New York Jets,24,Cleveland,13
+330809008,2013-08-09,Detroit,26,New York Jets,17
+330817020,2013-08-17,New York Jets,37,Jacksonville,13
+330908014,2013-09-08,St. Louis,27,Arizona Cardinals,24
+330915022,2013-09-15,Arizona Cardinals,25,Detroit,21
+330922018,2013-09-22,New Orleans,31,Arizona Cardinals,7
+330929027,2013-09-29,Tampa Bay,10,Arizona Cardinals,13
+331006022,2013-10-06,Arizona Cardinals,22,Carolina,6
+331013025,2013-10-13,San Francisco,32,Arizona Cardinals,20
+331017022,2013-10-17,Arizona Cardinals,22,Seattle,34
+331027022,2013-10-27,Arizona Cardinals,27,Atlanta,13
+331110022,2013-11-10,Arizona Cardinals,27,Houston,24
+331117030,2013-11-17,Jacksonville,14,Arizona Cardinals,27
+331124022,2013-11-24,Arizona Cardinals,40,Indianapolis,11
+331208022,2013-12-08,Arizona Cardinals,30,St. Louis,10
+331215010,2013-12-15,Tennessee,34,Arizona Cardinals,37
+331222026,2013-12-22,Seattle,10,Arizona Cardinals,17
+331229022,2013-12-29,Arizona Cardinals,20,San Francisco,23
+330809009,2013-08-09,Green Bay,0,Arizona Cardinals,17
+330824022,2013-08-24,Arizona Cardinals,7,San Diego,24
+330829007,2013-08-29,Denver,24,Arizona Cardinals,32
+340105009,2013-01-05,Green Bay,20,San Francisco 49ers,23
+340112029,2013-01-12,Carolina,10,San Francisco 49ers,23
+340119026,2013-01-19,Seattle,23,San Francisco 49ers,17
+330908025,2013-09-08,San Francisco 49ers,34,Green Bay,28
+330915026,2013-09-15,Seattle,29,San Francisco 49ers,3
+330922025,2013-09-22,San Francisco 49ers,7,Indianapolis,27
+330926014,2013-09-26,St. Louis,11,San Francisco 49ers,35
+331006025,2013-10-06,San Francisco 49ers,34,Houston,3
+331020010,2013-10-20,Tennessee,17,San Francisco 49ers,31
+331027030,2013-10-27,Jacksonville,10,San Francisco 49ers,42
+331110025,2013-11-10,San Francisco 49ers,9,Carolina,10
+331117018,2013-11-17,New Orleans,23,San Francisco 49ers,20
+331201025,2013-12-01,San Francisco 49ers,23,St. Louis,13
+331208025,2013-12-08,San Francisco 49ers,19,Seattle,17
+331215027,2013-12-15,Tampa Bay,14,San Francisco 49ers,33
+331223025,2013-12-23,San Francisco 49ers,34,Atlanta,24
+330808025,2013-08-08,San Francisco 49ers,6,Denver,10
+330816012,2013-08-16,Kansas City,13,San Francisco 49ers,15
+330825025,2013-08-25,San Francisco 49ers,34,Minnesota,14
+330829024,2013-08-29,San Diego,6,San Francisco 49ers,41
+340111026,2013-01-11,Seattle Seahawks,23,New Orleans,15
+340202007,2013-02-02,Denver,8,Seattle Seahawks,43
+330908029,2013-09-08,Carolina,7,Seattle Seahawks,12
+330922026,2013-09-22,Seattle Seahawks,45,Jacksonville,17
+330929034,2013-09-29,Houston,20,Seattle Seahawks,23
+331006011,2013-10-06,Indianapolis,34,Seattle Seahawks,28
+331013026,2013-10-13,Seattle Seahawks,20,Tennessee,13
+331028014,2013-10-28,St. Louis,9,Seattle Seahawks,14
+331103026,2013-11-03,Seattle Seahawks,27,Tampa Bay,24
+331110001,2013-11-10,Atlanta,10,Seattle Seahawks,33
+331117026,2013-11-17,Seattle Seahawks,41,Minnesota,20
+331202026,2013-12-02,Seattle Seahawks,34,New Orleans,7
+331229026,2013-12-29,Seattle Seahawks,27,St. Louis,9
+330808024,2013-08-08,San Diego,10,Seattle Seahawks,31
+330817026,2013-08-17,Seattle Seahawks,40,Denver,10
+330823009,2013-08-23,Green Bay,10,Seattle Seahawks,17
+330829026,2013-08-29,Seattle Seahawks,22,Oakland,6
+330915001,2013-09-15,Atlanta,31,St. Louis Rams,24
+331006014,2013-10-06,St. Louis Rams,34,Jacksonville,20
+331013034,2013-10-13,Houston,13,St. Louis Rams,38
+331020029,2013-10-20,Carolina,30,St. Louis Rams,15
+331103014,2013-11-03,St. Louis Rams,21,Tennessee,28
+331110011,2013-11-10,Indianapolis,8,St. Louis Rams,38
+331124014,2013-11-24,St. Louis Rams,42,Chicago,21
+331215014,2013-12-15,St. Louis Rams,27,New Orleans,16
+331222014,2013-12-22,St. Louis Rams,23,Tampa Bay,13
+330808005,2013-08-08,Cleveland,27,St. Louis Rams,19
+330817014,2013-08-17,St. Louis Rams,7,Green Bay,19
+330824007,2013-08-24,Denver,27,St. Louis Rams,26
+330829014,2013-08-29,St. Louis Rams,24,Baltimore,21
+340112007,2013-01-12,Denver Broncos,24,San Diego,17
+330905007,2013-09-05,Denver Broncos,49,Baltimore,27
+330923007,2013-09-23,Denver Broncos,37,Oakland,21
+331013007,2013-10-13,Denver Broncos,35,Jacksonville,19
+331020011,2013-10-20,Indianapolis,39,Denver Broncos,33
+331110024,2013-11-10,San Diego,20,Denver Broncos,28
+331117007,2013-11-17,Denver Broncos,27,Kansas City,17
+331201012,2013-12-01,Kansas City,28,Denver Broncos,35
+331208007,2013-12-08,Denver Broncos,51,Tennessee,28
+331212007,2013-12-12,Denver Broncos,20,San Diego,27
+331222034,2013-12-22,Houston,13,Denver Broncos,37
+331229013,2013-12-29,Oakland,14,Denver Broncos,34
+340104011,2013-01-04,Indianapolis,45,Kansas City Chiefs,44
+330908030,2013-09-08,Jacksonville,2,Kansas City Chiefs,28
+331006010,2013-10-06,Tennessee,17,Kansas City Chiefs,26
+331013012,2013-10-13,Kansas City Chiefs,24,Oakland,7
+331020012,2013-10-20,Kansas City Chiefs,17,Houston,16
+331027012,2013-10-27,Kansas City Chiefs,23,Cleveland,17
+331124012,2013-11-24,Kansas City Chiefs,38,San Diego,41
+331215013,2013-12-15,Oakland,31,Kansas City Chiefs,56
+331222012,2013-12-22,Kansas City Chiefs,7,Indianapolis,23
+331229024,2013-12-29,San Diego,27,Kansas City Chiefs,24
+330809018,2013-08-09,New Orleans,17,Kansas City Chiefs,13
+330824023,2013-08-24,Pittsburgh,20,Kansas City Chiefs,26
+330829012,2013-08-29,Kansas City Chiefs,30,Green Bay,8
+330908011,2013-09-08,Indianapolis,21,Oakland Raiders,17
+330915013,2013-09-15,Oakland Raiders,19,Jacksonville,9
+331006013,2013-10-06,Oakland Raiders,27,San Diego,17
+331027013,2013-10-27,Oakland Raiders,21,Pittsburgh,18
+331117034,2013-11-17,Houston,23,Oakland Raiders,28
+331124013,2013-11-24,Oakland Raiders,19,Tennessee,23
+331222024,2013-12-22,San Diego,26,Oakland Raiders,13
+330816018,2013-08-16,New Orleans,28,Oakland Raiders,20
+330823013,2013-08-23,Oakland Raiders,26,Chicago,34
+340105004,2013-01-05,Cincinnati,10,San Diego Chargers,27
+330909024,2013-09-09,San Diego Chargers,28,Houston,31
+330922010,2013-09-22,Tennessee,20,San Diego Chargers,17
+331014024,2013-10-14,San Diego Chargers,19,Indianapolis,9
+331020030,2013-10-20,Jacksonville,6,San Diego Chargers,24
+331201024,2013-12-01,San Diego Chargers,10,Cincinnati,17
+330815003,2013-08-15,Chicago,33,San Diego Chargers,28
+330908003,2013-09-08,Chicago Bears,24,Cincinnati,21
+330915003,2013-09-15,Chicago Bears,31,Minnesota,30
+330922023,2013-09-22,Pittsburgh,23,Chicago Bears,40
+330929008,2013-09-29,Detroit,40,Chicago Bears,32
+331006003,2013-10-06,Chicago Bears,18,New Orleans,26
+331104009,2013-11-04,Green Bay,20,Chicago Bears,27
+331110003,2013-11-10,Chicago Bears,19,Detroit,21
+331117003,2013-11-17,Chicago Bears,23,Baltimore,20
+331201016,2013-12-01,Minnesota,23,Chicago Bears,20
+331215005,2013-12-15,Cleveland,31,Chicago Bears,38
+331229003,2013-12-29,Chicago Bears,28,Green Bay,33
+330809029,2013-08-09,Carolina,24,Chicago Bears,17
+330829003,2013-08-29,Chicago Bears,16,Cleveland,18
+330908008,2013-09-08,Detroit Lions,34,Minnesota,24
+331006009,2013-10-06,Green Bay,22,Detroit Lions,9
+331013005,2013-10-13,Cleveland,17,Detroit Lions,31
+331020008,2013-10-20,Detroit Lions,24,Cincinnati,27
+331117023,2013-11-17,Pittsburgh,37,Detroit Lions,27
+331124008,2013-11-24,Detroit Lions,21,Tampa Bay,24
+331128008,2013-11-28,Detroit Lions,40,Green Bay,10
+331216008,2013-12-16,Detroit Lions,16,Baltimore,18
+331229016,2013-12-29,Minnesota,14,Detroit Lions,13
+330815005,2013-08-15,Cleveland,24,Detroit Lions,6
+330922004,2013-09-22,Cincinnati,34,Green Bay Packers,30
+331013033,2013-10-13,Baltimore,17,Green Bay Packers,19
+331020009,2013-10-20,Green Bay Packers,31,Cleveland,13
+331027016,2013-10-27,Minnesota,31,Green Bay Packers,44
+331208009,2013-12-08,Green Bay Packers,22,Atlanta,21
+331222009,2013-12-22,Green Bay Packers,31,Pittsburgh,38
+330922016,2013-09-22,Minnesota Vikings,27,Cleveland,31
+330929016,2013-09-29,Minnesota Vikings,34,Pittsburgh,27
+331013016,2013-10-13,Minnesota Vikings,10,Carolina,35
+331208033,2013-12-08,Baltimore,29,Minnesota Vikings,26
+331222004,2013-12-22,Cincinnati,42,Minnesota Vikings,14
+330809016,2013-08-09,Minnesota Vikings,13,Houston,27
+330829016,2013-08-29,Minnesota Vikings,24,Tennessee,23
+330915033,2013-09-15,Baltimore Ravens,14,Cleveland,6
+330922033,2013-09-22,Baltimore Ravens,30,Houston,9
+331020023,2013-10-20,Pittsburgh,19,Baltimore Ravens,16
+331103005,2013-11-03,Cleveland,24,Baltimore Ravens,18
+331110033,2013-11-10,Baltimore Ravens,20,Cincinnati,17
+331128033,2013-11-28,Baltimore Ravens,22,Pittsburgh,20
+331229004,2013-12-29,Cincinnati,34,Baltimore Ravens,17
+330808027,2013-08-08,Tampa Bay,16,Baltimore Ravens,44
+330815033,2013-08-15,Baltimore Ravens,27,Atlanta,23
+330822033,2013-08-22,Baltimore Ravens,27,Carolina,34
+330916004,2013-09-16,Cincinnati Bengals,20,Pittsburgh,10
+330929005,2013-09-29,Cleveland,17,Cincinnati Bengals,6
+331117004,2013-11-17,Cincinnati Bengals,41,Cleveland,20
+331208004,2013-12-08,Cincinnati Bengals,42,Indianapolis,28
+331215023,2013-12-15,Pittsburgh,30,Cincinnati Bengals,20
+330808001,2013-08-08,Atlanta,10,Cincinnati Bengals,34
+330817004,2013-08-17,Cincinnati Bengals,27,Tennessee,19
+330829004,2013-08-29,Cincinnati Bengals,27,Indianapolis,10
+331124005,2013-11-24,Cleveland Browns,11,Pittsburgh,27
+331201005,2013-12-01,Cleveland Browns,28,Jacksonville,32
+331229023,2013-12-29,Pittsburgh,20,Cleveland Browns,7
+330824011,2013-08-24,Indianapolis,27,Cleveland Browns,6
+330908023,2013-09-08,Pittsburgh Steelers,9,Tennessee,16
+330829029,2013-08-29,Carolina,25,Pittsburgh Steelers,10
+330908018,2013-09-08,New Orleans,23,Atlanta Falcons,17
+331020001,2013-10-20,Atlanta Falcons,31,Tampa Bay,23
+331103029,2013-11-03,Carolina,34,Atlanta Falcons,10
+331117027,2013-11-17,Tampa Bay,41,Atlanta Falcons,28
+331121001,2013-11-21,Atlanta Falcons,13,New Orleans,17
+331229001,2013-12-29,Atlanta Falcons,20,Carolina,21
+330824010,2013-08-24,Tennessee,27,Atlanta Falcons,16
+330829001,2013-08-29,Atlanta Falcons,16,Jacksonville,20
+331024027,2013-10-24,Tampa Bay,13,Carolina Panthers,31
+331201029,2013-12-01,Carolina Panthers,27,Tampa Bay,6
+331208018,2013-12-08,New Orleans,31,Carolina Panthers,13
+331222029,2013-12-22,Carolina Panthers,17,New Orleans,13
+330915027,2013-09-15,Tampa Bay,14,New Orleans Saints,16
+331229018,2013-12-29,New Orleans Saints,42,Tampa Bay,17
+330825034,2013-08-25,Houston,23,New Orleans Saints,31
+330915034,2013-09-15,Houston Texans,30,Tennessee,24
+331103034,2013-11-03,Houston Texans,24,Indianapolis,27
+331124034,2013-11-24,Houston Texans,6,Jacksonville,13
+331205030,2013-12-05,Jacksonville,27,Houston Texans,20
+331215011,2013-12-15,Indianapolis,25,Houston Texans,3
+331229010,2013-12-29,Tennessee,16,Houston Texans,10
+330929030,2013-09-29,Jacksonville,3,Indianapolis Colts,37
+331114010,2013-11-14,Tennessee,27,Indianapolis Colts,30
+331201011,2013-12-01,Indianapolis Colts,22,Tennessee,14
+331229011,2013-12-29,Indianapolis Colts,30,Jacksonville,10
+331110010,2013-11-10,Tennessee,27,Jacksonville Jaguars,29
+331222030,2013-12-22,Jacksonville Jaguars,16,Tennessee,20

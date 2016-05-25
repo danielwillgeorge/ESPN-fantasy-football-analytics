@@ -26,10 +26,10 @@ class teams(object):
         self.prefix_2 = []
         
         self.url = "http://espn.go.com/nfl/teams"
-        self.r = requests.get(url)
+        self.r = requests.get(self.url)
         
-        self.soup = BeautifulSoup(r.text, "html.parser")
-        self.tables = soup.find_all("ul", class_="medium-logos")
+        self.soup = BeautifulSoup(self.r.text, "html.parser")
+        self.tables = self.soup.find_all("ul", class_="medium-logos")
         
     def get(self):
         for table in self.tables:
@@ -41,13 +41,13 @@ class teams(object):
                 self.teams_urls.append(url)
                 self.prefix_1.append(url.split("/")[-2])
                 self.prefix_2.append(url.split("/")[-1])
-
-         dic = {"url": teams_urls, "prefix_2": prefix_2, "prefix_1": prefix_1}
-         teams = pd.DataFrame(dic, index=self.teams)
-         teams.index.name = "team"
-         teams.to_csv("/Users/daniel.george/Desktop/teams.csv")
+        dic = {"url": self.teams_urls, "prefix_2": self.prefix_2, "prefix_1": self.prefix_1}
+        teams = pd.DataFrame(dic, index=self.teams)
+        teams.index.name = "team"
+        return teams
+#         teams.to_csv("/Users/daniel.george/Desktop/teams.csv")
          
-class games(year):
+class games(object):
     def __init__(self):
         self.year = year
         self.teams = pd.read_csv('/path/to/teams.csv')
@@ -141,27 +141,27 @@ class players(object):
                 # (in my experience).
                 for table_ in table:
                     table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'})	
-                        for row in table_:
-                            heads = row.find_all('thead')
-                                for line in heads:
-                                    headers = line.find_all('th')
-                                    headers = [th.text for th in headers]
-                                    headers.pop(0)
-                                    columns = ['id', 'team', 'player'] + headers
-                                    columns = columns[:8]
-                                    #adjust to :9 for passing and receiving pulls
-                                    players = pd.DataFrame(columns=columns)
-                                rows = row.find_all('tr', {'class':''})
-                                for row_ in rows:
-                                    cols = row_.find_all('td')
-                                    if not cols[1].text.startswith('DNP'):
-                                        stats = []
-                                        self.stats.append(id)
-                                        self.stats.append(row.caption.text[:(len(row.caption.text)-8)])
-                                        for i in range(0,6):
-                                        #adjust to (0,7) for passing and receiving pulls
-                                            self.stats.append(cols[i].text)
-                                            self.stats_.append(stats)
+                    for row in table_:
+                        heads = row.find_all('thead')
+                        for line in heads:
+                            headers = line.find_all('th')
+                            headers = [th.text for th in headers]
+                            headers.pop(0)
+                            columns = ['id', 'team', 'player'] + headers
+                            columns = columns[:8]
+                            #adjust to :9 for passing and receiving pulls
+                            players = pd.DataFrame(columns=columns)
+                            rows = row.find_all('tr', {'class':''})
+                            for row_ in rows:
+                                cols = row_.find_all('td')
+                                if not cols[1].text.startswith('DNP'):
+                                    stats = []
+                                    self.stats.append(id)
+                                    self.stats.append(row.caption.text[:(len(row.caption.text)-8)])
+                                    for i in range(0,6):
+                                    #adjust to (0,7) for passing and receiving pulls
+                                        self.stats.append(cols[i].text)
+                                        self.stats_.append(stats)
             self.statistics = pd.DataFrame(np.array(stats_), columns=columns)
             self.players = players.append(statistics)
             # Replace "rushing" with the stats you are looking at (passing, receiving, etc.).

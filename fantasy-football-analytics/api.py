@@ -18,35 +18,28 @@ from bs4 import BeautifulSoup
 from datetime import datetime, date
 
 
-class teams(object):
-    def __init__(self):
-        self.teams = []
-        self.teams_urls = []
-        self.prefix_1 = []
-        self.prefix_2 = []
-        
-        self.url = "http://espn.go.com/nfl/teams"
-        self.r = requests.get(self.url)
-        
-        self.soup = BeautifulSoup(self.r.text, "html.parser")
-        self.tables = self.soup.find_all("ul", class_="medium-logos")
-    
-    #@staticmethod
-    def get(self):
-        for table in self.tables:
-            lis = table.find_all("li")
-            for li in lis:
-                info = li.h5.a
-                self.teams.append(info.text)
-                url = info["href"]
-                self.teams_urls.append(url)
-                self.prefix_1.append(url.split("/")[-2])
-                self.prefix_2.append(url.split("/")[-1])
-        dic = {"url": self.teams_urls, "prefix_2": self.prefix_2, "prefix_1": self.prefix_1}
-        teams = pd.DataFrame(dic, index=self.teams)
-        teams.index.name = "team"
-        return teams
-        #teams.to_csv("/Users/daniel.george/Desktop/teams.csv")
+def teams(teams=[], teams_urls=[], prefix_1=[], prefix_2=[]):
+	url = "http://espn.go.com/nfl/teams"
+	pd.set_option('display.width', 1000)
+	r = requests.get(url)
+	soup = BeautifulSoup(r.text, "html.parser")
+	tables = soup.find_all("ul", class_="medium-logos")
+
+	for table in tables:
+		lis = table.find_all("li")
+		for li in lis:
+			info = li.h5.a
+			url = info["href"]
+			teams.append(info.text)
+			teams_urls.append(url)
+			prefix_1.append(url.split("/")[-2])
+			prefix_2.append(url.split("/")[-1])
+	dic = {"url": teams_urls, "prefix_2": prefix_2, "prefix_1": prefix_1}
+	teams = pd.DataFrame(dic, index=teams)
+	teams.index.name = "team"
+	
+	return teams
+	
          
 class games(object):
     def __init__(self, object):

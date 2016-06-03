@@ -42,6 +42,43 @@ A way to quickly retrieve ESPN team, game, and player data for a strategic edge 
 	Jacksonville Jaguars      jax  jacksonville-jaguars  http://espn.go.com/nfl/team/_/name/jax/jackson...
 	Tennessee Titans          ten      tennessee-titans  http://espn.go.com/nfl/team/_/name/ten/tenness...
 
+    >>> espn.games(2015)
+    
+					 date             home_team home_team_score            visit_team visit_team_score
+	id                                                                                                
+	400791590  2015-09-13        Dallas Cowboys              27              New York               26
+	400791705  2015-09-20          Philadelphia              10        Dallas Cowboys               20
+	400791491  2015-09-27        Dallas Cowboys              28               Atlanta               39
+	400791720  2015-10-04           New Orleans              26        Dallas Cowboys               20
+	400791559  2015-10-11        Dallas Cowboys               6           New England               30
+	400791564  2015-10-25              New York              27        Dallas Cowboys               20
+	400791681  2015-11-01        Dallas Cowboys              12               Seattle               13
+	400791734  2015-11-08        Dallas Cowboys              27          Philadelphia               33
+	400791494  2015-11-15             Tampa Bay              10        Dallas Cowboys                6
+	400791703  2015-11-22                 Miami              14        Dallas Cowboys               24
+	400791509  2015-11-26        Dallas Cowboys              14              Carolina               33
+	400791686  2015-12-07            Washington              16        Dallas Cowboys               19
+	400791612  2015-12-13             Green Bay              28        Dallas Cowboys                7
+	400791656  2015-12-19        Dallas Cowboys              16              New York               19
+	400791535  2015-12-27               Buffalo              16        Dallas Cowboys                6
+	400791651  2015-01-03        Dallas Cowboys              23            Washington               34
+	400791786  2015-08-13             San Diego              17        Dallas Cowboys                7
+	400791787  2015-08-23         San Francisco              23        Dallas Cowboys                6
+	400791783  2015-08-29        Dallas Cowboys              14             Minnesota               28
+	400791777  2015-09-03        Dallas Cowboys              21               Houston               14
+	400791672  2015-09-20       New York Giants              20               Atlanta               24
+	400791484  2015-09-24       New York Giants              32            Washington               21
+	400791678  2015-10-04               Buffalo              10       New York Giants               24
+	400791584  2015-10-11       New York Giants              30         San Francisco               27
+	400791676  2015-10-19          Philadelphia              27       New York Giants                7
+	400791618  2015-11-01           New Orleans              52       New York Giants               49
+	400791731  2015-11-08             Tampa Bay              18       New York Giants               32
+	400791591  2015-11-15       New York Giants              26           New England               27
+	400791506  2015-11-29            Washington              20       New York Giants               14
+	400791572  2015-12-06       New York Giants              20              New York               23
+	...               ...                   ...             ...                   ...              ...    
+
+
 # Setup
 
 Simply:

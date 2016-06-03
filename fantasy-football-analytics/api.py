@@ -30,7 +30,8 @@ class teams(object):
         
         self.soup = BeautifulSoup(self.r.text, "html.parser")
         self.tables = self.soup.find_all("ul", class_="medium-logos")
-        
+    
+    #@staticmethod
     def get(self):
         for table in self.tables:
             lis = table.find_all("li")
@@ -45,13 +46,14 @@ class teams(object):
         teams = pd.DataFrame(dic, index=self.teams)
         teams.index.name = "team"
         return teams
-#         teams.to_csv("/Users/daniel.george/Desktop/teams.csv")
+        #teams.to_csv("/Users/daniel.george/Desktop/teams.csv")
          
 class games(object):
-    def __init__(self):
-        self.year = year
-        self.teams = pd.read_csv('/path/to/teams.csv')
-        self.BASE_URL = 'http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2'
+    def __init__(self, object):
+        self.year = int(object)
+        #self.t = teams()               #pd.read_csv('/path/to/teams.csv')
+        self.teams = teams().get()
+        self.BASE_URL = "http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2"
 
         self.match_id = []
         self.dates = []
@@ -61,11 +63,12 @@ class games(object):
         self.visit_team_score = []
 
     def get(self):
-        for index, row in teams.iterrows():
-            _team, url = row['team'], row['url']
-            r = requests.get(BASE_URL.format(row['prefix_1'], year, row['prefix_2']))
+        for index, row in self.teams.iterrows():
+            _team, url = index, row['url'] #row['team'],
+            r = requests.get(self.BASE_URL.format(row['prefix_1'], self.year, row['prefix_2']))
             soup = BeautifulSoup(r.text, "html.parser")
             table = soup.find('table', {'class':'tablehead'})
+            
             for row in table.find_all('tr')[1:]: # Remove header
                 columns = row.find_all('td')
                 try:
@@ -78,7 +81,7 @@ class games(object):
                     self.home_team.append(_team if _home else _other_team)
                     self.visit_team.append(_team if not _home else _other_team)
                     d = datetime.strptime(columns[1].text, '%a, %b %d')
-                    self.dates.append(date(year, d.month, d.day))
+                    self.dates.append(date(self.year, d.month, d.day))
 
                     if _home:
                         if _won:
@@ -97,10 +100,11 @@ class games(object):
                 except Exception as e:
                     pass # Not all columns row are a match, is OK
             
-        dic = {'id': match_id, 'date': dates, 'home_team': home_team, 'visit_team': visit_team,
-        'home_team_score': home_team_score, 'visit_team_score': visit_team_score}
+        dic = {'id': self.match_id, 'date': self.dates, 'home_team': self.home_team, 'visit_team': self.visit_team,
+        'home_team_score': self.home_team_score, 'visit_team_score': self.visit_team_score}
         games = pd.DataFrame(dic).drop_duplicates(subset='id').set_index('id')
-        games.to_csv('games.csv')
+        return games
+#         #games.to_csv('games.csv')
 
 class players(object):
     def __init__(self):

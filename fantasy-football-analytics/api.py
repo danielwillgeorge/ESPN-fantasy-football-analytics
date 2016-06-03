@@ -40,64 +40,52 @@ def teams(teams=[], teams_urls=[], prefix_1=[], prefix_2=[]):
 	
 	return teams
 	
-         
-class games(object):
-    def __init__(self, object):
-        self.year = int(object)
-        #self.t = teams()               #pd.read_csv('/path/to/teams.csv')
-        self.teams = teams().get()
-        self.BASE_URL = "http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2"
 
-        self.match_id = []
-        self.dates = []
-        self.home_team = []
-        self.home_team_score = []
-        self.visit_team = []
-        self.visit_team_score = []
-
-    def get(self):
-        for index, row in self.teams.iterrows():
-            _team, url = index, row['url'] #row['team'],
-            r = requests.get(self.BASE_URL.format(row['prefix_1'], self.year, row['prefix_2']))
-            soup = BeautifulSoup(r.text, "html.parser")
-            table = soup.find('table', {'class':'tablehead'})
+def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_team=[], visit_team_score=[], teams=teams):
+    year = int(year)
+    BASE_URL = "http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2"
+    for index, row in teams().iterrows():
+        _team, url = index, row['url']
+        r = requests.get(BASE_URL.format(row['prefix_1'], year, row['prefix_2']))
+        soup = BeautifulSoup(r.text, "html.parser")
+        table = soup.find('table', {'class':'tablehead'})
             
-            for row in table.find_all('tr')[1:]: # Remove header
-                columns = row.find_all('td')
-                try:
-                    _home = True if columns[2].li.text == 'vs' else False
-                    _other_team = columns[2].find_all('a')[1].text
-                    _score = columns[3].a.text.split(' ')[0].split('-')
-                    _won = True if columns[3].span.text == 'W' else False
+        for row in table.find_all('tr')[1:]:
+            columns = row.find_all('td')
+            try:
+                _home = True if columns[2].li.text == 'vs' else False
+                _other_team = columns[2].find_all('a')[1].text
+                _score = columns[3].a.text.split(' ')[0].split('-')
+                _won = True if columns[3].span.text == 'W' else False
 
-                    self.match_id.append(columns[3].a['href'].split('?gameId=')[1])
-                    self.home_team.append(_team if _home else _other_team)
-                    self.visit_team.append(_team if not _home else _other_team)
-                    d = datetime.strptime(columns[1].text, '%a, %b %d')
-                    self.dates.append(date(self.year, d.month, d.day))
+                match_id.append(columns[3].a['href'].split('?gameId=')[1])
+                home_team.append(_team if _home else _other_team)
+                visit_team.append(_team if not _home else _other_team)
+                d = datetime.strptime(columns[1].text, '%a, %b %d')
+                dates.append(date(year, d.month, d.day))
 
-                    if _home:
-                        if _won:
-                            self.home_team_score.append(_score[0])
-                            self.visit_team_score.append(_score[1])
-                        else:
-                            self.home_team_score.append(_score[1])
-                            self.visit_team_score.append(_score[0])
+                if _home:
+                    if _won:
+                        home_team_score.append(_score[0])
+                        visit_team_score.append(_score[1])
                     else:
-                        if _won:
-                            self.home_team_score.append(_score[1])
-                            self.visit_team_score.append(_score[0])
-                        else:
-                            self.home_team_score.append(_score[0])
-                            self.visit_team_score.append(_score[1])
-                except Exception as e:
-                    pass # Not all columns row are a match, is OK
+                        home_team_score.append(_score[1])
+                        visit_team_score.append(_score[0])
+                else:
+                    if _won:
+                        home_team_score.append(_score[1])
+                        visit_team_score.append(_score[0])
+                    else:
+                        home_team_score.append(_score[0])
+                        visit_team_score.append(_score[1])
+            except Exception as e:
+                pass # Not all columns row are a match, is OK
             
-        dic = {'id': self.match_id, 'date': self.dates, 'home_team': self.home_team, 'visit_team': self.visit_team,
-        'home_team_score': self.home_team_score, 'visit_team_score': self.visit_team_score}
-        games = pd.DataFrame(dic).drop_duplicates(subset='id').set_index('id')
-        return games
-#         #games.to_csv('games.csv')
+    dic = {'id': match_id, 'date': dates, 'home_team': home_team, 'visit_team': visit_team,
+    'home_team_score': home_team_score, 'visit_team_score': visit_team_score}
+    games = pd.DataFrame(dic).drop_duplicates(subset='id').set_index('id')
+    return games
+
 
 class players(object):
     def __init__(self):

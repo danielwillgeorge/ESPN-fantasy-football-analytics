@@ -87,77 +87,59 @@ def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_t
     return games
 
 
-def players(year, players=[], stats=[], stats_=[], divs=[]):
-    return None
+def players(param, year, players=[], stats=[], stats_=[], divs=[]):
+    BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
+    
+    d = {'passing':'gamepackage-passing',
+         'rushing':'gamepackage-rushing',
+         'receiving':'gamepackage-receiving'
+         }
+         
+    if param in ['passing','receiving']:
+        n = 9
+    else:
+        n = 8
+    
+    for index, row in games(year).iterrows():
+        id = index
+        r = requests.get(BASE_URL.format(id))
+        soup = BeautifulSoup(r.text, "html.parser")
+        table = soup.find_all('div', {'id':d[param]})
+        for table_ in table:
+            table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'})
+            for row in table_:
+                heads = row.find_all('thead')
+                for line in heads:
+                    headers = line.find_all('th')
+                    headers = [th.text for th in headers]
+                    headers.pop(0)
+                    columns = ['id', 'team', 'player'] + headers
+                    columns = columns[:n]
+                    players = pd.DataFrame(columns=columns)
+                    rows = row.find_all('tr', {'class':''})
+                    for row_ in rows:
+                        cols = row_.find_all('td')
+                        if not cols[1].text.startswith('DNP'):
+                            stats = []
+                            stats.append(id)
+                            stats.append(row.caption.text[:(len(row.caption.text)-8)])
+                            for i in range(0,(n-2)):
+                                stats.append(cols[i].text)
+                                stats_.append(stats)
+    statistics = pd.DataFrame(np.array(stats_), columns=columns)
+    players = players.append(statistics)
+    return players
 
 
-
-
-
-
-class players(object):
-    def __init__(self):
-        self.paths = ['2014','2013','2012','2011','2010']
-        self.BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
-
-        self.players = []
-        self.stats = []
-        self.stats_ = []
-        self.divs = []
-
-        '''classes = ["col column-one gamepackage-away-wrap","col column-two gamepackage-home-wrap"]
-            
-            gamepackage-passing
-            gamepackage-rushing
-            gamepackage-receiving
-            gamepackage-fumbles
-            gamepackage-defensive
-            gamepackage-interceptions
-            gamepackage-kickReturns
-            gamepackage-puntReturns
-            gamepackage-kicking
-            gamepackage-punting'''
-
-    def get(self):
-        for path in paths:
-            #games = pd.read_csv('/path/to/' + path + '_games.csv')
-            games(year)
-            for index, row in games.iterrows():
-                id = row['id']
-                r = requests.get(BASE_URL.format(id))
-                soup = BeautifulSoup(r.text, "html.parser")
-                table = soup.find_all('div', {'id':'gamepackage-rushing'}) # Replace the "id" parameter with one of the strings
-                														   # from the triple-quotes above. 
-                for table_ in table:
-                    table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'}) # Replace the "class" parameter with one of the strings from
-                																					  # the commented-out "classes" list above.  This will return one
-                																					  # set of data at a time; otherwise, the request will time out
-                																					  # (in my experience).	
-                    for row in table_:
-                        heads = row.find_all('thead')
-                        for line in heads:
-                            headers = line.find_all('th')
-                            headers = [th.text for th in headers]
-                            headers.pop(0)
-                            columns = ['id', 'team', 'player'] + headers
-                            columns = columns[:8]
-                            #adjust to :9 for passing and receiving pulls
-                            players = pd.DataFrame(columns=columns)
-                            rows = row.find_all('tr', {'class':''})
-                            for row_ in rows:
-                                cols = row_.find_all('td')
-                                if not cols[1].text.startswith('DNP'):
-                                    stats = []
-                                    self.stats.append(id)
-                                    self.stats.append(row.caption.text[:(len(row.caption.text)-8)])
-                                    for i in range(0,6):
-                                    #adjust to (0,7) for passing and receiving pulls
-                                        self.stats.append(cols[i].text)
-                                        self.stats_.append(stats)
-            self.statistics = pd.DataFrame(np.array(stats_), columns=columns)
-            self.players = players.append(statistics)
-            # Replace "rushing" with the stats you are looking at (passing, receiving, etc.).
-            # This will return a csv with half of the total data
-            # (for either the home or visiting team).  Run the script again
-            # changing the variables, for the other half.
-        players.to_csv(path + '_rushing_.csv')
+'''classes = ["col column-one gamepackage-away-wrap","col column-two gamepackage-home-wrap"]
+	
+	gamepackage-passing
+	gamepackage-rushing
+	gamepackage-receiving
+	gamepackage-fumbles
+	gamepackage-defensive
+	gamepackage-interceptions
+	gamepackage-kickReturns
+	gamepackage-puntReturns
+	gamepackage-kicking
+	gamepackage-punting'''

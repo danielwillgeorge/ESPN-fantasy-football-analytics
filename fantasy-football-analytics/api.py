@@ -87,6 +87,14 @@ def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_t
     return games
 
 
+def players(year, players=[], stats=[], stats_=[], divs=[]):
+    return None
+
+
+
+
+
+
 class players(object):
     def __init__(self):
         self.paths = ['2014','2013','2012','2011','2010']
@@ -112,20 +120,19 @@ class players(object):
 
     def get(self):
         for path in paths:
-            games = pd.read_csv('/path/to/' + path + '_games.csv')
+            #games = pd.read_csv('/path/to/' + path + '_games.csv')
+            games(year)
             for index, row in games.iterrows():
                 id = row['id']
                 r = requests.get(BASE_URL.format(id))
                 soup = BeautifulSoup(r.text, "html.parser")
-                # Replace the "id" parameter with one of the strings
-                # from the triple-quotes above.
-                table = soup.find_all('div', {'id':'gamepackage-rushing'})
-                # Replace the "class" parameter with one of the strings from
-                # the commented-out "classes" list above.  This will return one
-                # set of data at a time; otherwise, the request will time out
-                # (in my experience).
+                table = soup.find_all('div', {'id':'gamepackage-rushing'}) # Replace the "id" parameter with one of the strings
+                														   # from the triple-quotes above. 
                 for table_ in table:
-                    table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'})	
+                    table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'}) # Replace the "class" parameter with one of the strings from
+                																					  # the commented-out "classes" list above.  This will return one
+                																					  # set of data at a time; otherwise, the request will time out
+                																					  # (in my experience).	
                     for row in table_:
                         heads = row.find_all('thead')
                         for line in heads:

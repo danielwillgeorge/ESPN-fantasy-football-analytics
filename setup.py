@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-  name = 'ESPN-fantasy-football-analytics',
-  packages = ['ESPN-fantasy-football-analytics'], # this must be the same as the name above
+  name = 'fantasy-football-analytics',
+  packages = ['fantasy-football-analytics'], # this must be the same as the name above
   version = '0.1',
   description = 'A way to quickly retrieve ESPN team, game, and player data for a strategic edge in Fantasy Football leagues.',
   author = 'Daniel Will George',

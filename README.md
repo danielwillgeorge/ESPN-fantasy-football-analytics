@@ -78,6 +78,7 @@ A way to quickly retrieve ESPN team, game, and player data for a strategic edge 
 	400791572  2015-12-06       New York Giants              20              New York               23
 	...               ...                   ...             ...                   ...              ...    
 
+    >>> espn.players("rushing", 2015)
 
 # Setup
 

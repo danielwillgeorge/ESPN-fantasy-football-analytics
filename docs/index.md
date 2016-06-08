@@ -29,7 +29,7 @@ Now, let's get a list of teams!  Easy as:
     
 *Parameters*: there are no required parameters for the `teams()` method.
 
-*`teams` resource*: Here are the properties that appear in a `teams` resource:
+`teams` *resource*: Here are the properties that appear in a `teams` resource:
 team: the official NFL team name of a team.
 prefix_1: an abbreviation of the team name.
 prefix_2: a lowercase, hyphenated version of the team name.
@@ -78,7 +78,17 @@ expressed as an integer:
 
     >>> espn.games(2015)
     
-    					 date             home_team home_team_score            visit_team visit_team_score
+*Parameters*: year: an integer value representing the calendar year for which you would like to retrieve game data.
+
+`games` *resource*: Here are the properties that appear in a `games` resource:
+id: a unique identifier for that game on ESPN.com.
+date: the date the game took place, expressed in the format YYYY-mm-dd.
+home_team:
+home_team_score:
+visit_team:
+visit_team_score:
+    
+    				 date             home_team home_team_score            visit_team visit_team_score
 	id                                                                                                
 	400791590  2015-09-13        Dallas Cowboys              27       New York Giants               26
 	400791705  2015-09-20   Philadelphia Eagles              10        Dallas Cowboys               20

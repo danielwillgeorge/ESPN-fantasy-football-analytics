@@ -17,6 +17,39 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, date
 
+dic_ = {'dallas-cowboys':'Dallas Cowboys',
+'new-york-giants':'New York Giants',
+'philadelphia-eagles':'Philadelphia Eagles',
+'washington-redskins':'Washington Redskins',
+'buffalo-bills':'Buffalo Bills',
+'miami-dolphins':'Miami Dolphins',
+'new-england-patriots':'New England Patriots',
+'new-york-jets':'New York Jets',
+'arizona-cardinals':'Arizona Cardinals',
+'los-angeles-rams':'Los Angeles Rams',
+'san-francisco-49ers':'San Francisco 49ers',
+'seattle-seahawks':'Seattle Seahawks',
+'denver-broncos':'Denver Broncos',
+'kansas-city-chiefs':'Kansas City Chiefs',
+'oakland-raiders':'Oakland Raiders',
+'san-diego-chargers':'San Diego Chargers',
+'chicago-bears':'Chicago Bears',
+'detroit-lions':'Detroit Lions',
+'green-bay-packers':'Green Bay Packers',
+'minnesota-vikings':'Minnesota Vikings',
+'baltimore-ravens':'Baltimore Ravens',
+'cincinnati-bengals':'Cincinnati Bengals',
+'cleveland-browns':'Cleveland Browns',
+'pittsburgh-steelers':'Pittsburgh Steelers',
+'atlanta-falcons':'Atlanta Falcons',
+'carolina-panthers':'Carolina Panthers',
+'new-orleans-saints':'New Orleans Saints',
+'tampa-bay-buccaneers':'Tampa Bay Buccaneers',
+'houston-texans':'Houston Texans',
+'indianapolis-colts':'Indianapolis Colts',
+'jacksonville-jaguars':'Jacksonville Jaguars',
+'tennessee-titans':'Tennessee Titans'}
+
 
 def teams(teams=[], teams_urls=[], prefix_1=[], prefix_2=[]):
 	url = "http://espn.go.com/nfl/teams"
@@ -54,13 +87,14 @@ def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_t
             columns = row.find_all('td')
             try:
                 _home = True if columns[2].li.text == 'vs' else False
-                _other_team = columns[2].find_all('a')[1].text
+                #_other_team = columns[2].find_all('a')[1].text
+                _other_team = columns[2].find_all('a')[1]['href'].split('/')[-1]
                 _score = columns[3].a.text.split(' ')[0].split('-')
                 _won = True if columns[3].span.text == 'W' else False
 
                 match_id.append(columns[3].a['href'].split('?gameId=')[1])
-                home_team.append(_team if _home else _other_team)
-                visit_team.append(_team if not _home else _other_team)
+                home_team.append(_team if _home else dic_[_other_team])
+                visit_team.append(_team if not _home else dic_[_other_team])
                 d = datetime.strptime(columns[1].text, '%a, %b %d')
                 dates.append(date(year, d.month, d.day))
 

@@ -27,7 +27,16 @@ Now, let's get a list of teams!  Easy as:
 
     >>> espn.teams()
     
-    						prefix_1              prefix_2                                                url
+*Parameters*: there are no required parameters for the `teams()` method.
+
+*`teams` resource*: Here are the properties that appear in a `teams` resource:
+team: the official NFL team name of a team.
+prefix_1: an abbreviation of the team name.
+prefix_2: a lowercase, hyphenated version of the team name.
+url: the location of that team on http://www.espn.com/.
+
+    
+    					 prefix_1              prefix_2                                                url
 	team                                                                                                  
 	Dallas Cowboys            dal        dallas-cowboys  http://espn.go.com/nfl/team/_/name/dal/dallas-...
 	New York Giants           nyg       new-york-giants  http://espn.go.com/nfl/team/_/name/nyg/new-yor...
@@ -61,3 +70,44 @@ Now, let's get a list of teams!  Easy as:
 	Indianapolis Colts        ind    indianapolis-colts  http://espn.go.com/nfl/team/_/name/ind/indiana...
 	Jacksonville Jaguars      jax  jacksonville-jaguars  http://espn.go.com/nfl/team/_/name/jax/jackson...
 	Tennessee Titans          ten      tennessee-titans  http://espn.go.com/nfl/team/_/name/ten/tenness...
+	
+# Games
+
+We can get a list of games for a given calendar year, too.  Again, super-easy.  This method takes one argument, the calendar year of your choice
+expressed as an integer:
+
+    >>> espn.games(2015)
+    
+    					 date             home_team home_team_score            visit_team visit_team_score
+	id                                                                                                
+	400791590  2015-09-13        Dallas Cowboys              27       New York Giants               26
+	400791705  2015-09-20   Philadelphia Eagles              10        Dallas Cowboys               20
+	400791491  2015-09-27        Dallas Cowboys              28       Atlanta Falcons               39
+	400791720  2015-10-04    New Orleans Saints              26        Dallas Cowboys               20
+	400791559  2015-10-11        Dallas Cowboys               6  New England Patriots               30
+	400791564  2015-10-25       New York Giants              27        Dallas Cowboys               20
+	400791681  2015-11-01        Dallas Cowboys              12      Seattle Seahawks               13
+	400791734  2015-11-08        Dallas Cowboys              27   Philadelphia Eagles               33
+	400791494  2015-11-15  Tampa Bay Buccaneers              10        Dallas Cowboys                6
+	400791703  2015-11-22        Miami Dolphins              14        Dallas Cowboys               24
+	400791509  2015-11-26        Dallas Cowboys              14     Carolina Panthers               33
+	400791686  2015-12-07   Washington Redskins              16        Dallas Cowboys               19
+	400791612  2015-12-13     Green Bay Packers              28        Dallas Cowboys                7
+	400791656  2015-12-19        Dallas Cowboys              16         New York Jets               19
+	400791535  2015-12-27         Buffalo Bills              16        Dallas Cowboys                6
+	400791651  2015-01-03        Dallas Cowboys              23   Washington Redskins               34
+	400791786  2015-08-13    San Diego Chargers              17        Dallas Cowboys                7
+	400791787  2015-08-23   San Francisco 49ers              23        Dallas Cowboys                6
+	400791783  2015-08-29        Dallas Cowboys              14     Minnesota Vikings               28
+	400791777  2015-09-03        Dallas Cowboys              21        Houston Texans               14
+	400791672  2015-09-20       New York Giants              20       Atlanta Falcons               24
+	400791484  2015-09-24       New York Giants              32   Washington Redskins               21
+	400791678  2015-10-04         Buffalo Bills              10       New York Giants               24
+	400791584  2015-10-11       New York Giants              30   San Francisco 49ers               27
+	400791676  2015-10-19   Philadelphia Eagles              27       New York Giants                7
+	400791618  2015-11-01    New Orleans Saints              52       New York Giants               49
+	400791731  2015-11-08  Tampa Bay Buccaneers              18       New York Giants               32
+	400791591  2015-11-15       New York Giants              26  New England Patriots               27
+	400791506  2015-11-29   Washington Redskins              20       New York Giants               14
+	400791572  2015-12-06       New York Giants              20         New York Jets               23
+	...               ...                   ...             ...                   ...              ...

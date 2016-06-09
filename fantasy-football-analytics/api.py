@@ -51,9 +51,10 @@ dic_ = {'dallas-cowboys':'Dallas Cowboys',
 'tennessee-titans':'Tennessee Titans'}
 
 
-def teams(teams=[], teams_urls=[], prefix_1=[], prefix_2=[]):
+def teams(teams=[], teams_urls=[], abbrev=[]):
 	url = "http://espn.go.com/nfl/teams"
 	pd.set_option('display.width', 1000)
+	pd.set_option('display.max_colwidth', 1000)
 	r = requests.get(url)
 	soup = BeautifulSoup(r.text, "html.parser")
 	tables = soup.find_all("ul", class_="medium-logos")
@@ -65,9 +66,8 @@ def teams(teams=[], teams_urls=[], prefix_1=[], prefix_2=[]):
 			url = info["href"]
 			teams.append(info.text)
 			teams_urls.append(url)
-			prefix_1.append(url.split("/")[-2])
-			prefix_2.append(url.split("/")[-1])
-	dic = {"url": teams_urls, "prefix_2": prefix_2, "prefix_1": prefix_1}
+			abbrev.append(url.split("/")[-2])
+	dic = {"url": teams_urls, "abbrev": abbrev}
 	teams = pd.DataFrame(dic, index=teams)
 	teams.index.name = "team"
 	
@@ -87,7 +87,6 @@ def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_t
             columns = row.find_all('td')
             try:
                 _home = True if columns[2].li.text == 'vs' else False
-                #_other_team = columns[2].find_all('a')[1].text
                 _other_team = columns[2].find_all('a')[1]['href'].split('/')[-1]
                 _score = columns[3].a.text.split(' ')[0].split('-')
                 _won = True if columns[3].span.text == 'W' else False

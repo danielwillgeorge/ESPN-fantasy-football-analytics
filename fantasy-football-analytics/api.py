@@ -18,37 +18,75 @@ from bs4 import BeautifulSoup
 from datetime import datetime, date
 
 dic_ = {'dallas-cowboys':'Dallas Cowboys',
+'cowboys':'Dallas Cowboys',
 'new-york-giants':'New York Giants',
+'giants':'New York Giants',
 'philadelphia-eagles':'Philadelphia Eagles',
+'eagles':'Philadelphia Eagles',
 'washington-redskins':'Washington Redskins',
+'redskins':'Washington Redskins',
 'buffalo-bills':'Buffalo Bills',
+'bills':'Buffalo Bills',
 'miami-dolphins':'Miami Dolphins',
+'dolphins':'Miami Dolphins',
 'new-england-patriots':'New England Patriots',
+'patriots':'New England Patriots',
 'new-york-jets':'New York Jets',
+'jets':'New York Jets',
 'arizona-cardinals':'Arizona Cardinals',
+'cardinals':'Arizona Cardinals',
 'los-angeles-rams':'Los Angeles Rams',
+'rams':'Los Angeles Rams',
 'san-francisco-49ers':'San Francisco 49ers',
+'49ers':'San Francisco 49ers',
 'seattle-seahawks':'Seattle Seahawks',
+'seahawks':'Seattle Seahawks',
 'denver-broncos':'Denver Broncos',
+'broncos':'Denver Broncos',
 'kansas-city-chiefs':'Kansas City Chiefs',
+'chiefs':'Kansas City Chiefs',
 'oakland-raiders':'Oakland Raiders',
+'raiders':'Oakland Raiders',
 'san-diego-chargers':'San Diego Chargers',
+'chargers':'San Diego Chargers',
 'chicago-bears':'Chicago Bears',
+'bears':'Chicago Bears',
 'detroit-lions':'Detroit Lions',
+'lions':'Detroit Lions',
 'green-bay-packers':'Green Bay Packers',
+'packers':'Green Bay Packers',
 'minnesota-vikings':'Minnesota Vikings',
+'vikings':'Minnesota Vikings',
 'baltimore-ravens':'Baltimore Ravens',
+'ravens':'Baltimore Ravens',
 'cincinnati-bengals':'Cincinnati Bengals',
+'bengals':'Cincinnati Bengals',
 'cleveland-browns':'Cleveland Browns',
+'browns':'Cleveland Browns',
 'pittsburgh-steelers':'Pittsburgh Steelers',
+'steelers':'Pittsburgh Steelers',
 'atlanta-falcons':'Atlanta Falcons',
+'falcons':'Atlanta Falcons',
 'carolina-panthers':'Carolina Panthers',
+'panthers':'Carolina Panthers',
 'new-orleans-saints':'New Orleans Saints',
+'saints':'New Orleans Saints',
 'tampa-bay-buccaneers':'Tampa Bay Buccaneers',
+'buccaneers':'Tampa Bay Buccaneers',
 'houston-texans':'Houston Texans',
+'texans':'Houston Texans',
 'indianapolis-colts':'Indianapolis Colts',
+'colts':'Indianapolis Colts',
 'jacksonville-jaguars':'Jacksonville Jaguars',
-'tennessee-titans':'Tennessee Titans'}
+'jaguars':'Jacksonville Jaguars',
+'tennessee-titans':'Tennessee Titans',
+'titans':'Tennessee Titans'}
+
+classes = ["col column-one gamepackage-away-wrap","col column-two gamepackage-home-wrap"]
+
+gamepackages = ['gamepackage-passing', 'gamepackage-rushing', 'gamepackage-receiving']
+
+pd.set_option('display.width', 1200)
 
 
 def teams(teams=[], teams_urls=[], abbrev=[]):
@@ -119,60 +157,86 @@ def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_t
     games = pd.DataFrame(dic).drop_duplicates(subset='id').set_index('id')
     return games
 
+def group_(seq, size):
+  return (seq[pos:pos + size] for pos in xrange(0, len(seq), size))
 
-def players(param, year, players=[], stats=[], stats_=[], divs=[]):
-    BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
-    
-    d = {'passing':'gamepackage-passing',
-         'rushing':'gamepackage-rushing',
-         'receiving':'gamepackage-receiving'
-         }
-         
-    if param in ['passing','receiving']:
-        n = 9
-    else:
-        n = 8
-    
-    for index, row in games(year).iterrows():
-        id = index
-        r = requests.get(BASE_URL.format(id))
-        soup = BeautifulSoup(r.text, "html.parser")
-        table = soup.find_all('div', {'id':d[param]})
-        for table_ in table:
-            table_ = table_.find_all('div', {'class':'col column-two gamepackage-home-wrap'})
-            for row in table_:
-                heads = row.find_all('thead')
-                for line in heads:
-                    headers = line.find_all('th')
-                    headers = [th.text for th in headers]
-                    headers.pop(0)
-                    columns = ['id', 'team', 'player'] + headers
-                    columns = columns[:n]
-                    players = pd.DataFrame(columns=columns)
-                    rows = row.find_all('tr', {'class':''})
-                    for row_ in rows:
-                        cols = row_.find_all('td')
-                        if not cols[1].text.startswith('DNP'):
-                            stats = []
-                            stats.append(id)
-                            stats.append(row.caption.text[:(len(row.caption.text)-8)])
-                            for i in range(0,(n-2)):
-                                stats.append(cols[i].text)
-                                stats_.append(stats)
-    statistics = pd.DataFrame(np.array(stats_), columns=columns)
-    players = players.append(statistics)
-    return players
+def players(id):
 
+	columns = ['id', 'team', 'gamepackage', 'player', 'REC', 'CAR', 'C/ATT', 'YDS', 'AVG', 'TD', 'LONG', 'TGTS', 'INT', 'SACKS']
+	players_ = pd.DataFrame(columns=columns)
 
-'''classes = ["col column-one gamepackage-away-wrap","col column-two gamepackage-home-wrap"]
-	
-	gamepackage-passing
-	gamepackage-rushing
-	gamepackage-receiving
-	gamepackage-fumbles
-	gamepackage-defensive
-	gamepackage-interceptions
-	gamepackage-kickReturns
-	gamepackage-puntReturns
-	gamepackage-kicking
-	gamepackage-punting'''
+	columns = ['id', 'team', 'gamepackage', 'player', 'REC', 'CAR', 'C/ATT', 'YDS', 'AVG', 'TD', 'LONG', 'TGTS', 'INT', 'SACKS']
+	_players = pd.DataFrame(columns=columns)
+
+	BASE_URL = 'http://espn.go.com/nfl/boxscore?gameId={0}'
+
+	for gamepackage in gamepackages:
+		stats_ = []
+		id = id
+		r = requests.get(BASE_URL.format(id))
+		soup = BeautifulSoup(r.text, "html5lib") #html.parser
+		title = soup.title.text.split(' ')
+		
+		for class_ in classes:
+		
+			table = soup.find_all('div', {'id':gamepackage})
+			
+			for table_ in table:
+				table_ = table_.find_all('div', {'class':class_})
+			
+				for _row in table_:
+					heads = _row.find_all('thead')
+					for line in heads:
+						headers = line.find_all('th')
+						headers = [th.text for th in headers]
+						headers.pop(0)
+						columns = ['id', 'team', 'gamepackage', 'player'] + headers
+						if gamepackage == 'gamepackage-rushing':
+							columns = columns[:9]
+						elif gamepackage == 'gamepackage-receiving':
+							columns = columns[:10]
+						else:
+							columns = columns[:12]
+						players = pd.DataFrame(columns=columns)
+				
+					rows = _row.find_all('td')
+					
+					if gamepackage == 'gamepackage-rushing':
+						n = 6
+					elif gamepackage == 'gamepackage-receiving':
+						n = 7
+					else:
+						n = 9
+				
+					for group in group_(rows, n):
+						stats = []
+						stats.append(id)
+						if class_ == 'col column-two gamepackage-home-wrap':
+							stats.append(dic_[title[2].lower()])
+						else:
+							stats.append(dic_[title[0].lower()])
+						stats.append(gamepackage.split('-')[-1])
+						try:
+							for i in range(0,n):
+							#adjust to (0,7) for passing and receiving pulls
+								if group[i].text == 'TEAM':
+									break
+								else:
+									stats.append(group[i].text)
+						except IndexError:
+							pass
+						if not len(stats) == 3:
+							stats_.append(stats)
+
+		
+		statistics = pd.DataFrame(np.array(stats_), columns=columns)
+		players = players.append(statistics)
+
+		players_ = pd.concat([players_, players])
+
+	res = players_.reindex_axis(_players.columns, axis=1)
+	res = res.fillna('')
+	res = res.set_index('id')
+	res.index.name = 'id'
+
+	return res

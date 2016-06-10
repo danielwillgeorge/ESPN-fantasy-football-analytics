@@ -27,7 +27,7 @@ A way to quickly retrieve ESPN team, game, and player data for a strategic edge 
 	400791559  2015-10-11        Dallas Cowboys               6  New England Patriots               30
 	...               ...                   ...             ...                   ...              ...
 
-    >>> espn.players("rushing", 2015)
+    >>> espn.players(400791590)
     
               id     team             player CAR  YDS   AVG TD LONG
     0  400554447  Seattle     Marshawn Lynch  10  113  11.3  2   79

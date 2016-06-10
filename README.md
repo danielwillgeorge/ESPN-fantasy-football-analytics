@@ -41,7 +41,8 @@ A way to quickly retrieve ESPN team, game, and player data for a strategic edge 
 	4   400554447  Arizona Cardinals     rushing     Stepfan Taylor      11          19   1.7  0    4               
 	5   400554447  Arizona Cardinals     rushing       Marion Grice       1           6   6.0  0    6               
 	6   400554447  Arizona Cardinals     rushing   Kerwynn Williams       2           4   2.0  0    3               
-	7   400554447  Arizona Cardinals     rushing      Robert Hughes       1           0   0.0  0    0               
+	7   400554447  Arizona Cardinals     rushing      Robert Hughes       1           0   0.0  0    0
+	...       ...                ...         ...                ... ... ...    ...  ...   ... ..  ...  ... ...   ...
 
 # Setup
 

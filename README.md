@@ -27,7 +27,7 @@ A way to quickly retrieve ESPN team, game, and player data for a strategic edge 
 	400791559  2015-10-11        Dallas Cowboys               6  New England Patriots               30
 	...               ...                   ...             ...                   ...              ...
 
-    >>> espn.players(400791590)
+    >>> espn.players(400554447)
     
 			   id               team gamepackage             player REC CAR  C/ATT  YDS   AVG TD LONG TGTS INT SACKS
 	0   400554447            Seattle     passing     Russell Wilson          20/31  339  10.9  2             0  1-10

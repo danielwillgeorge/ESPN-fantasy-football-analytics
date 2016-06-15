@@ -117,7 +117,7 @@ def games(year, match_id=[], dates=[], home_team=[], home_team_score=[], visit_t
     BASE_URL = "http://espn.go.com/nfl/team/schedule/_/name/{0}/year/{1}/{2}/seasontype/2"
     for index, row in teams().iterrows():
         _team, url = index, row['url']
-        r = requests.get(BASE_URL.format(row['prefix_1'], year, row['prefix_2']))
+        r = requests.get(BASE_URL.format(row['abbrev'], year, row['url'].split("/")[-1]))
         soup = BeautifulSoup(r.text, "html.parser")
         table = soup.find('table', {'class':'tablehead'})
             

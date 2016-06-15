@@ -4,8 +4,8 @@ import pandas as pd
 
 sys.path.append("/Users/daniel.george/Desktop/github/ESPN-fantasy-football-analytics/fantasy-football-analytics")
 
-import fantasy-football-analytics
-from fantasy-football-analytics.api import teams
+import espnfantasyfootball
+from espnfantasyfootball.api import teams
 
 #from api import teams
 

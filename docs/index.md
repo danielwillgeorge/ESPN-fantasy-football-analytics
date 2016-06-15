@@ -31,9 +31,10 @@ Now, let's get a list of teams!  Easy as:
 
 `Teams` *Resource*: Here are the properties that appear in a `teams` resource:
 - team: the official NFL team name of a team.
-- abbrev: an abbreviation of the team name.
-- url: the location of that team on http://www.espn.com/.
 
+- abbrev: an abbreviation of the team name.
+
+- url: the location of that team on http://www.espn.com/.
     
 							 abbrev                                                          url
 		team                                                                                    

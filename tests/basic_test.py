@@ -20,8 +20,8 @@ class BasicTestSuite(unittest.TestCase):
     def test_is_games_success(self):
         self.assertIsInstance(games(2015), pd.DataFrame)
         
-    def test_is_players_success(self):
-        self.assertIsInstance(players(400554447), pd.DataFrame)
+    #def test_is_players_success(self):
+        #self.assertIsInstance(players(400554447), pd.DataFrame)
 
 
 if __name__ == '__main__':

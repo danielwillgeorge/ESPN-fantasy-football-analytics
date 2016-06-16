@@ -174,7 +174,7 @@ def players(id):
 		stats_ = []
 		id = id
 		r = requests.get(BASE_URL.format(id))
-		soup = BeautifulSoup(r.text, "html5lib") #html.parser
+		soup = BeautifulSoup(r.text, "html5lib")
 		title = soup.title.text.split(' ')
 		
 		for class_ in classes:

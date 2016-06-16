@@ -3,7 +3,7 @@ import sys
 import pandas as pd
 
 import espnfantasyfootball
-from espnfantasyfootball.api import teams
+from espnfantasyfootball.api import teams, games, players
 
 #sys.path.append("/Users/daniel.george/Desktop/github/ESPN-fantasy-football-analytics/fantasy-football-analytics")
 #from api import teams
